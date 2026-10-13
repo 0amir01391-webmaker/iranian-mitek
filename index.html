@@ -1,0 +1,3997 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+<meta name="description" content="TradeMitek — پلتفرم حرفه‌ای آموزش ترید، تحلیل بازار و ابزارهای معاملاتی. آموزش فارکس، کریپتو، مدیریت ریسک و ژورنال معاملاتی.">
+<meta name="author" content="AmirMohammad Khodarezaei">
+<meta name="theme-color" content="#0a0e17">
+<meta property="og:title" content="TradeMitek | مرجع حرفه‌ای ترید">
+<meta property="og:description" content="آموزش، تحلیل، ابزار و ژورنال حرفه‌ای ترید.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📈</text></svg>">
+<title>TradeMitek | مرجع حرفه‌ای ترید و تحلیل بازار</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer">
+<style>
+/* ============================================================
+   TradeMitek — Premium Trading Platform
+   Author: AmirMohammad Khodarezaei
+   Support: Armin Alinaghi
+   ============================================================ */
+
+/* ================= 1. TOKENS ================= */
+:root {
+  --font: 'Segoe UI', 'Poppins', Tahoma, system-ui, -apple-system, sans-serif;
+  --font-en: 'SF Pro Display', 'Segoe UI', system-ui, sans-serif;
+
+  /* Base */
+  --bg-0: #05080f;
+  --bg-1: #0a0e17;
+  --bg-2: #0f1420;
+  --bg-3: #161c2b;
+  --bg-4: #1e2638;
+
+  /* Glass */
+  --glass: rgba(15, 20, 32, 0.72);
+  --glass-2: rgba(22, 28, 43, 0.85);
+  --glass-border: rgba(212, 162, 76, 0.14);
+  --glass-border-2: rgba(212, 162, 76, 0.28);
+  --glass-hover: rgba(30, 38, 56, 0.9);
+
+  /* Gold palette */
+  --gold-1: #b8863b;
+  --gold-2: #d4a24c;
+  --gold-3: #f0c674;
+  --gold-4: #f5d689;
+  --gold-soft: rgba(212, 162, 76, 0.12);
+  --gold-glow: rgba(240, 198, 116, 0.22);
+
+  /* Accents */
+  --emerald: #3ecf8e;
+  --emerald-soft: rgba(62, 207, 142, 0.14);
+  --rose: #ef5b78;
+  --rose-soft: rgba(239, 91, 120, 0.14);
+  --sky: #4da6ff;
+  --sky-soft: rgba(77, 166, 255, 0.12);
+
+  /* Text */
+  --text-0: #f2f4f9;
+  --text-1: #c3cbdb;
+  --text-2: #8590a8;
+  --text-3: #5a6478;
+  --text-muted: #6d7891;
+
+  /* Gradients */
+  --grad-gold: linear-gradient(135deg, #d4a24c 0%, #f0c674 50%, #b8863b 100%);
+  --grad-gold-soft: linear-gradient(135deg, rgba(212,162,76,0.9), rgba(240,198,116,0.7));
+  --grad-text: linear-gradient(135deg, #f5d689 0%, #d4a24c 50%, #b8863b 100%);
+  --grad-emerald: linear-gradient(135deg, #3ecf8e, #22a06b);
+  --grad-rose: linear-gradient(135deg, #ef5b78, #c0392b);
+
+  /* Shadows */
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.35);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.45);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.55);
+  --shadow-gold: 0 8px 32px rgba(212, 162, 76, 0.22);
+  --shadow-gold-lg: 0 16px 56px rgba(212, 162, 76, 0.32);
+
+  /* Radii */
+  --r-sm: 8px;
+  --r-md: 12px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+  --r-full: 100px;
+
+  /* Transitions */
+  --t-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --t-mid: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --t-slow: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Layout */
+  --nav-h: 68px;
+  --bottom-nav-h: 66px;
+}
+
+/* ================= 2. RESET ================= */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  font-family: var(--font);
+  background: var(--bg-1);
+  color: var(--text-0);
+  direction: rtl;
+  min-height: 100vh;
+  overflow-x: hidden;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+button, input, select, textarea { font-family: inherit; font-size: inherit; color: inherit; }
+button { cursor: pointer; border: none; background: none; }
+a { color: inherit; text-decoration: none; }
+img, canvas, svg { display: block; max-width: 100%; }
+ul, ol { list-style: none; }
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+
+/* ================= 3. SELECTION & SCROLLBAR ================= */
+::selection { background: var(--gold-2); color: #1a1206; }
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: var(--bg-0); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, var(--gold-2), var(--gold-1));
+  border-radius: 6px;
+  border: 2px solid var(--bg-0);
+}
+::-webkit-scrollbar-thumb:hover { background: var(--gold-3); }
+
+/* ================= 4. BACKGROUND ================= */
+#bg-canvas {
+  position: fixed; inset: 0;
+  width: 100%; height: 100%;
+  z-index: 0; pointer-events: none;
+  opacity: 0.75;
+}
+.bg-grid-layer {
+  position: fixed; inset: 0; z-index: 1; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(212, 162, 76, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 162, 76, 0.045) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 30%, transparent 90%);
+  -webkit-mask-image: radial-gradient(ellipse 100% 70% at 50% 0%, #000 30%, transparent 90%);
+}
+.bg-glow {
+  position: fixed; z-index: 1; pointer-events: none; border-radius: 50%;
+  filter: blur(120px); will-change: transform;
+}
+.bg-glow-1 {
+  top: -20%; right: -10%;
+  width: 55vw; height: 55vw; max-width: 800px; max-height: 800px;
+  background: radial-gradient(circle, rgba(212, 162, 76, 0.16), transparent 65%);
+  animation: glowFloat 24s ease-in-out infinite alternate;
+}
+.bg-glow-2 {
+  bottom: -25%; left: -15%;
+  width: 60vw; height: 60vw; max-width: 850px; max-height: 850px;
+  background: radial-gradient(circle, rgba(77, 166, 255, 0.10), transparent 65%);
+  animation: glowFloat 30s ease-in-out infinite alternate-reverse;
+}
+@keyframes glowFloat {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(4%, 6%) scale(1.15); }
+}
+
+/* ================= 5. LAYOUT ================= */
+.app {
+  position: relative; z-index: 5;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 1.5rem 2rem 6rem;
+  min-height: calc(100vh - var(--nav-h));
+}
+.page { animation: pageIn 0.4s ease; }
+@keyframes pageIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+/* ================= 6. TOP NAV ================= */
+.top-nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(10, 14, 23, 0.82);
+  backdrop-filter: blur(20px) saturate(140%);
+  -webkit-backdrop-filter: blur(20px) saturate(140%);
+  border-bottom: 1px solid var(--glass-border);
+}
+.nav-inner {
+  max-width: 1440px; margin: 0 auto;
+  padding: 0 2rem;
+  height: var(--nav-h);
+  display: flex; align-items: center; gap: 16px;
+}
+.brand {
+  display: flex; align-items: center; gap: 10px;
+  font-weight: 800; font-size: 1.15rem; color: var(--text-0);
+  flex-shrink: 0;
+}
+.brand-mark {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--grad-gold);
+  display: grid; place-items: center;
+  font-size: 1.1rem; color: #1a1206;
+  font-weight: 900;
+  box-shadow: var(--shadow-gold);
+  position: relative; overflow: hidden;
+}
+.brand-mark::after {
+  content: ''; position: absolute; inset: 0;
+  background: linear-gradient(120deg, transparent 30%, rgba(255,255,255,0.4) 50%, transparent 70%);
+  animation: brandShine 4s linear infinite;
+}
+@keyframes brandShine {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.brand-text { display: flex; flex-direction: column; line-height: 1.15; }
+.brand-text strong { font-size: 1.08rem; letter-spacing: 0.3px; }
+.brand-text small { font-size: 0.68rem; color: var(--text-3); letter-spacing: 1px; font-weight: 400; }
+
+.nav-links { display: flex; gap: 2px; flex: 1; overflow-x: auto; scrollbar-width: none; }
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-link {
+  padding: 8px 14px; border-radius: 10px;
+  font-size: 0.85rem; font-weight: 500;
+  color: var(--text-2); white-space: nowrap;
+  transition: all var(--t-fast);
+  border: 1px solid transparent;
+}
+.nav-link:hover { color: var(--text-0); background: rgba(255,255,255,0.03); }
+.nav-link.active {
+  color: var(--gold-3);
+  background: var(--gold-soft);
+  border-color: var(--glass-border-2);
+}
+
+.nav-actions { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.icon-btn {
+  width: 40px; height: 40px; border-radius: 11px;
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  color: var(--text-1);
+  display: grid; place-items: center;
+  font-size: 0.95rem;
+  transition: all var(--t-fast);
+  position: relative;
+}
+.icon-btn:hover {
+  color: var(--gold-3);
+  border-color: var(--glass-border-2);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-gold);
+}
+.icon-btn .badge {
+  position: absolute; top: -4px; right: -4px;
+  min-width: 18px; height: 18px;
+  background: var(--grad-gold);
+  color: #1a1206; border-radius: 9px;
+  font-size: 0.65rem; font-weight: 700;
+  display: grid; place-items: center;
+  padding: 0 5px;
+}
+
+/* ================= 7. HERO ================= */
+.hero {
+  padding: 60px 0 40px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 48px;
+  align-items: center;
+  min-height: 520px;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 16px; border-radius: var(--r-full);
+  background: var(--glass);
+  border: 1px solid var(--glass-border-2);
+  font-size: 0.78rem; color: var(--gold-3);
+  margin-bottom: 24px;
+  font-weight: 500;
+}
+.hero-badge .dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--emerald);
+  box-shadow: 0 0 12px var(--emerald);
+  animation: pulseDot 2s infinite;
+}
+@keyframes pulseDot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(0.85); }
+}
+.hero h1 {
+  font-size: clamp(2.1rem, 4.6vw, 3.6rem);
+  font-weight: 800;
+  line-height: 1.25;
+  letter-spacing: -0.5px;
+  margin-bottom: 20px;
+}
+.hero h1 .gold {
+  background: var(--grad-text);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+}
+.hero .type-line {
+  display: inline-flex; align-items: center; gap: 4px;
+  min-height: 1.3em;
+  color: var(--gold-3);
+  font-weight: 700;
+}
+.hero .cursor {
+  display: inline-block; width: 3px; height: 1em;
+  background: var(--gold-2);
+  margin-right: 2px;
+  animation: blink 1s step-end infinite;
+  vertical-align: middle;
+}
+@keyframes blink { 50% { opacity: 0; } }
+.hero p {
+  font-size: clamp(0.98rem, 1.8vw, 1.12rem);
+  color: var(--text-1);
+  max-width: 560px;
+  margin-bottom: 32px;
+}
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+/* Hero visual */
+.hero-visual {
+  position: relative;
+  height: 460px;
+  display: flex; align-items: center; justify-content: center;
+}
+.hero-card {
+  position: absolute;
+  background: linear-gradient(145deg, rgba(22, 28, 43, 0.95), rgba(15, 20, 32, 0.95));
+  border: 1px solid var(--glass-border-2);
+  border-radius: var(--r-xl);
+  padding: 18px 20px;
+  backdrop-filter: blur(16px);
+  box-shadow: var(--shadow-lg), inset 0 1px 0 rgba(255,255,255,0.04);
+  transform-style: preserve-3d;
+}
+.hero-card-main {
+  width: 340px; height: 240px;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%) perspective(1200px) rotateY(-8deg) rotateX(4deg);
+  z-index: 3;
+  animation: cardFloat 6s ease-in-out infinite;
+}
+.hero-card-small-1 {
+  width: 200px; height: 110px;
+  top: 8%; right: 4%;
+  transform: perspective(1200px) rotateY(-14deg) rotateX(6deg) rotateZ(2deg);
+  z-index: 2;
+  animation: cardFloat2 7s ease-in-out infinite;
+}
+.hero-card-small-2 {
+  width: 190px; height: 105px;
+  bottom: 6%; left: 2%;
+  transform: perspective(1200px) rotateY(-6deg) rotateX(-4deg) rotateZ(-2deg);
+  z-index: 1;
+  animation: cardFloat3 8s ease-in-out infinite;
+}
+@keyframes cardFloat {
+  0%, 100% { transform: translate(-50%, -50%) perspective(1200px) rotateY(-8deg) rotateX(4deg) translateY(0); }
+  50% { transform: translate(-50%, -50%) perspective(1200px) rotateY(-8deg) rotateX(4deg) translateY(-12px); }
+}
+@keyframes cardFloat2 {
+  0%, 100% { transform: perspective(1200px) rotateY(-14deg) rotateX(6deg) rotateZ(2deg) translateY(0); }
+  50% { transform: perspective(1200px) rotateY(-14deg) rotateX(6deg) rotateZ(2deg) translateY(8px); }
+}
+@keyframes cardFloat3 {
+  0%, 100% { transform: perspective(1200px) rotateY(-6deg) rotateX(-4deg) rotateZ(-2deg) translateY(0); }
+  50% { transform: perspective(1200px) rotateY(-6deg) rotateX(-4deg) rotateZ(-2deg) translateY(-10px); }
+}
+.card-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 12px;
+}
+.card-symbol {
+  display: flex; align-items: center; gap: 8px;
+  font-weight: 700; font-size: 0.9rem;
+}
+.card-symbol .ic {
+  width: 28px; height: 28px; border-radius: 8px;
+  background: var(--bg-3);
+  display: grid; place-items: center;
+  font-size: 0.85rem; font-weight: 800;
+}
+.card-live {
+  font-size: 0.62rem; font-weight: 700;
+  padding: 2px 8px; border-radius: 6px;
+  background: var(--emerald-soft);
+  color: var(--emerald);
+  letter-spacing: 0.5px;
+  display: inline-flex; align-items: center; gap: 4px;
+}
+.card-live::before {
+  content: ''; width: 5px; height: 5px;
+  background: var(--emerald); border-radius: 50%;
+  animation: pulseDot 1.5s infinite;
+}
+.card-price { font-size: 1.5rem; font-weight: 800; font-variant-numeric: tabular-nums; direction: ltr; text-align: right; margin-bottom: 6px; }
+.card-change { font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; gap: 4px; }
+.card-change.up { color: var(--emerald); }
+.card-change.down { color: var(--rose); }
+.mini-chart { width: 100%; height: 60px; margin-top: 8px; opacity: 0.9; }
+.small-price { font-size: 1.15rem; font-weight: 800; direction: ltr; text-align: right; font-variant-numeric: tabular-nums; }
+.small-label { font-size: 0.7rem; color: var(--text-2); }
+
+/* ================= 8. BUTTONS ================= */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--r-md);
+  font-weight: 600; font-size: 0.9rem;
+  transition: all var(--t-fast);
+  border: 1px solid transparent;
+  white-space: nowrap;
+}
+.btn-primary {
+  background: var(--grad-gold);
+  color: #1a1206;
+  box-shadow: var(--shadow-gold);
+}
+.btn-primary:hover { transform: translateY(-2px); box-shadow: var(--shadow-gold-lg); }
+.btn-ghost {
+  background: var(--glass);
+  color: var(--text-0);
+  border-color: var(--glass-border-2);
+}
+.btn-ghost:hover {
+  border-color: var(--gold-2);
+  color: var(--gold-3);
+  transform: translateY(-2px);
+}
+.btn-outline {
+  background: transparent;
+  color: var(--text-1);
+  border-color: var(--glass-border);
+}
+.btn-outline:hover { color: var(--text-0); border-color: var(--text-2); }
+.btn-danger {
+  background: var(--rose-soft);
+  color: var(--rose);
+  border-color: rgba(239, 91, 120, 0.3);
+}
+.btn-danger:hover { background: rgba(239, 91, 120, 0.22); }
+.btn-sm { padding: 8px 16px; font-size: 0.82rem; border-radius: 9px; }
+
+/* ================= 9. CARDS ================= */
+.card {
+  background: var(--glass);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  padding: 22px;
+  transition: all var(--t-mid);
+  position: relative;
+}
+.card:hover { border-color: var(--glass-border-2); box-shadow: var(--shadow-md); }
+.card-clickable { cursor: pointer; }
+.card-clickable:hover { transform: translateY(-4px); }
+.card-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 18px; gap: 12px; flex-wrap: wrap;
+}
+.card-title { font-size: 1rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+.card-title i { color: var(--gold-3); }
+
+/* ================= 10. SECTIONS ================= */
+.section { margin-bottom: 56px; }
+.section-title {
+  font-size: clamp(1.3rem, 2.6vw, 1.75rem);
+  font-weight: 800;
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-title .gold {
+  background: var(--grad-text);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.section-sub { color: var(--text-2); font-size: 0.92rem; margin-bottom: 24px; }
+.section-head { text-align: center; margin-bottom: 36px; }
+.section-head .section-title { justify-content: center; }
+.section-head .section-sub { max-width: 620px; margin: 0 auto; }
+
+/* ================= 11. GRID ================= */
+.grid { display: grid; gap: 16px; }
+.grid-2 { grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); }
+.grid-3 { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+
+/* ================= 12. STATS ================= */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.4rem;
+  padding: 32px 28px;
+  background: var(--glass);
+  backdrop-filter: blur(16px);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-xl);
+  box-shadow: var(--shadow-md);
+  position: relative; overflow: hidden;
+}
+.stats::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 60%; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
+  opacity: 0.6;
+}
+.stat { text-align: center; }
+.stat .num {
+  font-size: 2.2rem; font-weight: 800;
+  background: var(--grad-text);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: block;
+  font-variant-numeric: tabular-nums;
+}
+.stat .label { color: var(--text-2); font-size: 0.86rem; margin-top: 4px; }
+
+/* ================= 13. FEATURE CARDS ================= */
+.feature-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  padding: 26px 22px;
+  transition: all var(--t-mid);
+  position: relative; overflow: hidden;
+}
+.feature-card::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 3px; height: 0%;
+  background: var(--grad-gold);
+  transition: height var(--t-mid);
+}
+.feature-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--glass-border-2);
+  box-shadow: var(--shadow-md);
+}
+.feature-card:hover::before { height: 100%; }
+.feature-icon {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: linear-gradient(135deg, rgba(212, 162, 76, 0.18), rgba(184, 134, 59, 0.08));
+  border: 1px solid var(--glass-border-2);
+  display: grid; place-items: center;
+  font-size: 1.35rem;
+  color: var(--gold-3);
+  margin-bottom: 16px;
+}
+.feature-card h3 { font-size: 1.05rem; margin-bottom: 8px; font-weight: 700; }
+.feature-card p { color: var(--text-2); font-size: 0.88rem; line-height: 1.75; }
+
+/* ================= 14. FORMS ================= */
+.form-group { margin-bottom: 16px; }
+.form-label {
+  display: block; font-size: 0.82rem; color: var(--text-1);
+  margin-bottom: 6px; font-weight: 500;
+}
+.form-input, .form-select, .form-textarea {
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--glass-border);
+  background: rgba(5, 8, 15, 0.6);
+  color: var(--text-0);
+  font-size: 0.9rem;
+  transition: all var(--t-fast);
+  outline: none;
+}
+.form-input:focus, .form-select:focus, .form-textarea:focus {
+  border-color: var(--gold-2);
+  box-shadow: 0 0 0 3px rgba(212, 162, 76, 0.12);
+  background: rgba(5, 8, 15, 0.85);
+}
+.form-input[dir="ltr"] { direction: ltr; text-align: right; font-variant-numeric: tabular-nums; }
+.form-textarea { resize: vertical; min-height: 80px; }
+.form-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.form-select { cursor: pointer; }
+.form-select option { background: var(--bg-2); color: var(--text-0); }
+
+/* ================= 15. TAGS ================= */
+.tag {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 3px 10px; border-radius: 8px;
+  font-size: 0.72rem; font-weight: 600;
+  background: var(--bg-3);
+  color: var(--text-1);
+  border: 1px solid rgba(255,255,255,0.05);
+  white-space: nowrap;
+}
+.tag-gold { background: var(--gold-soft); color: var(--gold-3); border-color: var(--glass-border-2); }
+.tag-emerald { background: var(--emerald-soft); color: var(--emerald); border-color: rgba(62, 207, 142, 0.25); }
+.tag-rose { background: var(--rose-soft); color: var(--rose); border-color: rgba(239, 91, 120, 0.25); }
+.tag-sky { background: var(--sky-soft); color: var(--sky); border-color: rgba(77, 166, 255, 0.25); }
+.level-beginner { background: var(--emerald-soft); color: var(--emerald); }
+.level-intermediate { background: rgba(240, 198, 116, 0.14); color: var(--gold-3); }
+.level-advanced { background: var(--rose-soft); color: var(--rose); }
+
+/* ================= 16. PROGRESS ================= */
+.progress-bar {
+  height: 8px; border-radius: 4px;
+  background: var(--bg-3);
+  overflow: hidden;
+}
+.progress-fill {
+  height: 100%; border-radius: 4px;
+  background: var(--grad-gold);
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+
+/* ================= 17. TOASTS ================= */
+.toast-container {
+  position: fixed; top: 88px; left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  display: flex; flex-direction: column; gap: 8px;
+  pointer-events: none;
+  width: min(92%, 420px);
+}
+.toast {
+  background: var(--glass-2);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border-2);
+  border-radius: var(--r-md);
+  padding: 12px 18px;
+  font-size: 0.88rem;
+  color: var(--text-0);
+  box-shadow: var(--shadow-lg);
+  display: flex; align-items: center; gap: 10px;
+  pointer-events: auto;
+  animation: toastIn 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative; overflow: hidden;
+}
+.toast::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 3px; height: 100%;
+  background: var(--grad-gold);
+}
+.toast.success::before { background: var(--emerald); }
+.toast.error::before { background: var(--rose); }
+.toast.info::before { background: var(--sky); }
+@keyframes toastIn { from { opacity: 0; transform: translateY(-16px); } to { opacity: 1; transform: translateY(0); } }
+.toast.out { animation: toastOut 0.3s ease forwards; }
+@keyframes toastOut { to { opacity: 0; transform: translateY(-16px); } }
+
+/* ================= 18. MODAL ================= */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(8px);
+  display: none; align-items: center; justify-content: center;
+  padding: 16px;
+  animation: fadeIn 0.25s ease;
+}
+.modal-overlay.open { display: flex; }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+.modal {
+  background: linear-gradient(145deg, var(--bg-2), var(--bg-1));
+  border: 1px solid var(--glass-border-2);
+  border-radius: var(--r-xl);
+  max-width: 680px;
+  width: 100%;
+  max-height: 88vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-lg);
+  animation: modalIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+.modal::before {
+  content: ''; position: absolute; top: 0; right: 10%; left: 10%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-2), transparent);
+}
+@keyframes modalIn {
+  from { opacity: 0; transform: scale(0.95) translateY(12px); }
+  to { opacity: 1; transform: scale(1) translateY(0); }
+}
+.modal-header {
+  padding: 22px 26px;
+  border-bottom: 1px solid var(--glass-border);
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 12px;
+  position: sticky; top: 0;
+  background: var(--bg-1);
+  z-index: 1;
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+}
+.modal-title { font-size: 1.12rem; font-weight: 700; }
+.modal-close {
+  width: 34px; height: 34px; border-radius: 9px;
+  border: 1px solid var(--glass-border);
+  background: var(--bg-3);
+  color: var(--text-1);
+  display: grid; place-items: center;
+  font-size: 0.95rem;
+  transition: all var(--t-fast);
+  flex-shrink: 0;
+}
+.modal-close:hover { color: var(--rose); border-color: var(--rose); }
+.modal-body { padding: 26px; }
+
+/* ================= 19. SEARCH ================= */
+.search-overlay {
+  position: fixed; inset: 0; z-index: 1100;
+  background: rgba(0,0,0,0.82);
+  backdrop-filter: blur(14px);
+  display: none;
+  padding: 80px 16px;
+  align-items: flex-start; justify-content: center;
+}
+.search-overlay.open { display: flex; animation: fadeIn 0.2s ease; }
+.search-box {
+  background: linear-gradient(145deg, var(--bg-2), var(--bg-1));
+  border: 1px solid var(--glass-border-2);
+  border-radius: var(--r-lg);
+  width: 100%; max-width: 680px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  animation: modalIn 0.3s ease;
+}
+.search-input-wrap {
+  display: flex; align-items: center; gap: 12px;
+  padding: 18px 22px;
+  border-bottom: 1px solid var(--glass-border);
+}
+.search-input-wrap i { color: var(--gold-3); font-size: 1.05rem; }
+.search-input-wrap input {
+  flex: 1; background: none; border: none;
+  color: var(--text-0); font-size: 1rem; outline: none;
+}
+.search-input-wrap input::placeholder { color: var(--text-3); }
+.search-results { max-height: 60vh; overflow-y: auto; padding: 8px; }
+.search-result {
+  padding: 12px 16px; border-radius: 10px;
+  cursor: pointer;
+  transition: background var(--t-fast);
+  display: flex; align-items: center; gap: 12px;
+}
+.search-result:hover, .search-result.active { background: var(--glass-hover); }
+.search-result-icon {
+  width: 38px; height: 38px; border-radius: 10px;
+  background: var(--bg-3);
+  display: grid; place-items: center;
+  flex-shrink: 0;
+  color: var(--gold-3);
+  font-size: 0.95rem;
+}
+.search-result-title { font-weight: 600; font-size: 0.9rem; }
+.search-result-cat { font-size: 0.75rem; color: var(--text-2); margin-top: 2px; }
+.search-empty { padding: 44px 20px; text-align: center; color: var(--text-2); }
+.search-empty .ic { font-size: 2.6rem; margin-bottom: 10px; color: var(--text-3); }
+.search-hint {
+  padding: 12px 18px;
+  border-top: 1px solid var(--glass-border);
+  font-size: 0.75rem; color: var(--text-3);
+  display: flex; gap: 18px;
+}
+kbd {
+  background: var(--bg-3); border: 1px solid var(--glass-border);
+  border-radius: 5px; padding: 1px 6px;
+  font-size: 0.7rem; font-family: monospace;
+  color: var(--text-1);
+}
+
+/* ================= 20. BOTTOM NAV ================= */
+.bottom-nav {
+  display: none;
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(10, 14, 23, 0.9);
+  backdrop-filter: blur(20px) saturate(140%);
+  border-top: 1px solid var(--glass-border);
+  height: var(--bottom-nav-h);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+.bottom-nav-inner { display: flex; height: 100%; }
+.bottom-nav-item {
+  flex: 1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px;
+  color: var(--text-2); font-size: 0.68rem; font-weight: 500;
+  transition: color var(--t-fast);
+  background: none; border: none;
+  position: relative;
+}
+.bottom-nav-item .ic { font-size: 1.2rem; }
+.bottom-nav-item.active { color: var(--gold-3); }
+.bottom-nav-item.active::before {
+  content: ''; position: absolute; top: 0;
+  width: 26px; height: 3px;
+  background: var(--grad-gold);
+  border-radius: 0 0 4px 4px;
+  box-shadow: 0 0 12px var(--gold-glow);
+}
+
+/* ================= 21. FAB ================= */
+.fab {
+  position: fixed;
+  bottom: calc(var(--bottom-nav-h) + 16px);
+  left: 16px; z-index: 150;
+  width: 54px; height: 54px;
+  border-radius: 16px; border: none;
+  background: var(--grad-gold);
+  color: #1a1206;
+  font-size: 1.25rem;
+  display: none; place-items: center;
+  box-shadow: var(--shadow-gold-lg);
+  transition: all var(--t-fast);
+}
+.fab:hover { transform: scale(1.08) rotate(90deg); }
+
+/* ================= 22. DRAWER ================= */
+.drawer { position: fixed; inset: 0; z-index: 300; display: none; }
+.drawer.open { display: block; }
+.drawer-bg {
+  position: absolute; inset: 0;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(6px);
+  animation: fadeIn 0.25s ease;
+}
+.drawer-panel {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(180deg, var(--bg-2), var(--bg-1));
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  border-top: 1px solid var(--glass-border-2);
+  padding: 20px 20px 32px;
+  max-height: 78vh;
+  overflow-y: auto;
+  animation: drawerIn 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+@keyframes drawerIn { from { transform: translateY(100%); } to { transform: translateY(0); } }
+.drawer-handle {
+  width: 40px; height: 4px;
+  background: var(--text-3); border-radius: 2px;
+  margin: 0 auto 16px; opacity: 0.5;
+}
+.drawer-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px; border-radius: var(--r-md);
+  cursor: pointer; transition: background var(--t-fast);
+  font-size: 0.95rem;
+  color: var(--text-1);
+}
+.drawer-item:hover { background: var(--glass); color: var(--text-0); }
+.drawer-item .ic {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--bg-3);
+  display: grid; place-items: center;
+  font-size: 1rem;
+  color: var(--gold-3);
+  flex-shrink: 0;
+}
+
+/* ================= 23. SCROLL TOP ================= */
+.scroll-top {
+  position: fixed;
+  bottom: 26px; left: 26px;
+  width: 46px; height: 46px;
+  border-radius: 14px;
+  background: var(--glass-2);
+  backdrop-filter: blur(12px);
+  color: var(--gold-3);
+  border: 1px solid var(--glass-border-2);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem;
+  opacity: 0; pointer-events: none;
+  transform: translateY(20px);
+  transition: all var(--t-mid);
+  z-index: 90;
+}
+.scroll-top.show { opacity: 1; pointer-events: auto; transform: translateY(0); }
+.scroll-top:hover { background: var(--grad-gold); color: #1a1206; transform: translateY(-3px); }
+
+/* ================= 24. CHART PANEL ================= */
+.chart-panel {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-lg);
+  padding: 20px;
+  position: relative; overflow: hidden;
+}
+.chart-toolbar {
+  display: flex; gap: 10px; flex-wrap: wrap;
+  margin-bottom: 16px;
+  align-items: center;
+}
+.chart-toolbar select, .chart-toolbar button {
+  background: rgba(5, 8, 15, 0.7);
+  color: var(--text-1);
+  border: 1px solid var(--glass-border);
+  border-radius: 9px;
+  padding: 7px 12px;
+  font-size: 0.82rem;
+  cursor: pointer;
+  transition: all var(--t-fast);
+  outline: none;
+}
+.chart-toolbar select:hover, .chart-toolbar button:hover {
+  border-color: var(--gold-2);
+  color: var(--gold-3);
+}
+.chart-toolbar select option { background: var(--bg-2); }
+.chart-canvas-wrap {
+  position: relative;
+  width: 100%; height: 340px;
+  border-radius: var(--r-md);
+  overflow: hidden;
+  background: radial-gradient(ellipse at 30% 20%, rgba(212, 162, 76, 0.06), transparent 60%),
+              rgba(5, 8, 15, 0.6);
+  border: 1px solid var(--glass-border);
+}
+#live-chart { width: 100%; height: 100%; display: block; }
+.chart-stats {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-top: 14px; flex-wrap: wrap; gap: 12px;
+}
+.chart-price {
+  font-size: 1.55rem; font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  direction: ltr; text-align: right;
+  letter-spacing: -0.5px;
+}
+.chart-symbol-name { font-size: 0.82rem; color: var(--text-2); margin-top: 2px; }
+.chart-change {
+  font-size: 0.9rem; font-weight: 700;
+  padding: 5px 14px; border-radius: var(--r-full);
+  border: 1px solid transparent;
+}
+.chart-change.up {
+  color: var(--emerald);
+  background: var(--emerald-soft);
+  border-color: rgba(62, 207, 142, 0.3);
+}
+.chart-change.down {
+  color: var(--rose);
+  background: var(--rose-soft);
+  border-color: rgba(239, 91, 120, 0.3);
+}
+
+/* ================= 25. JOURNAL / SIGNALS ================= */
+.journal-list { max-height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }
+.journal-item {
+  background: rgba(5, 8, 15, 0.5);
+  border: 1px solid var(--glass-border);
+  border-radius: 10px;
+  padding: 12px 14px;
+  display: flex; justify-content: space-between; align-items: center;
+  gap: 12px;
+  font-size: 0.86rem;
+  transition: all var(--t-fast);
+}
+.journal-item:hover { border-color: var(--glass-border-2); transform: translateX(-3px); }
+.journal-item-left { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.journal-item-left strong { color: var(--text-0); }
+.journal-item-note { color: var(--text-2); font-size: 0.78rem; }
+.journal-item-right { display: flex; align-items: center; gap: 10px; }
+.pnl-pos { color: var(--emerald); font-weight: 700; }
+.pnl-neg { color: var(--rose); font-weight: 700; }
+.journal-del {
+  width: 28px; height: 28px; border-radius: 8px;
+  background: transparent;
+  color: var(--text-3);
+  display: grid; place-items: center;
+  font-size: 0.8rem;
+  transition: all var(--t-fast);
+}
+.journal-del:hover { color: var(--rose); background: var(--rose-soft); }
+
+.signals-list { display: flex; flex-direction: column; gap: 8px; max-height: 320px; overflow-y: auto; }
+.signal-item {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(5, 8, 15, 0.5);
+  border: 1px solid var(--glass-border);
+  font-size: 0.86rem;
+  transition: all var(--t-fast);
+  border-right: 3px solid var(--emerald);
+}
+.signal-item.sell { border-right-color: var(--rose); }
+.signal-item:hover { border-color: var(--glass-border-2); }
+.signal-info { display: flex; flex-direction: column; gap: 3px; }
+.signal-info strong { color: var(--text-0); font-size: 0.92rem; }
+.signal-info span { color: var(--text-2); font-size: 0.74rem; direction: ltr; text-align: right; font-variant-numeric: tabular-nums; }
+.signal-badge {
+  padding: 4px 12px; border-radius: var(--r-full);
+  font-size: 0.72rem; font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.signal-badge.buy { background: var(--emerald-soft); color: var(--emerald); }
+.signal-badge.sell { background: var(--rose-soft); color: var(--rose); }
+
+/* ================= 26. MARKET CARDS ================= */
+.market-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  padding: 16px;
+  display: flex; flex-direction: column; gap: 10px;
+  transition: all var(--t-mid);
+  position: relative; overflow: hidden;
+}
+.market-card::before {
+  content: ''; position: absolute; top: 0; right: 0;
+  width: 3px; height: 100%;
+  background: var(--grad-gold);
+  opacity: 0; transition: opacity var(--t-mid);
+}
+.market-card:hover::before { opacity: 1; }
+.market-card:hover { border-color: var(--glass-border-2); transform: translateY(-3px); box-shadow: var(--shadow-md); }
+.market-top { display: flex; align-items: center; justify-content: space-between; }
+.market-symbol { display: flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.92rem; }
+.market-icon {
+  width: 32px; height: 32px; border-radius: 9px;
+  display: grid; place-items: center;
+  font-size: 0.85rem; font-weight: 800;
+  background: var(--bg-3);
+}
+.market-price { font-size: 1.15rem; font-weight: 800; direction: ltr; text-align: right; font-variant-numeric: tabular-nums; }
+.market-change { font-size: 0.82rem; font-weight: 600; display: flex; align-items: center; gap: 4px; }
+.market-change.up { color: var(--emerald); }
+.market-change.down { color: var(--rose); }
+
+/* ================= 27. ROADMAP ================= */
+.roadmap { position: relative; padding-right: 36px; }
+.roadmap::before {
+  content: ''; position: absolute; right: 13px; top: 8px; bottom: 8px;
+  width: 2px;
+  background: linear-gradient(180deg, var(--gold-2), var(--gold-1), transparent);
+  opacity: 0.35;
+}
+.roadmap-step {
+  position: relative;
+  margin-bottom: 12px;
+  padding: 16px 20px;
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  cursor: pointer;
+  transition: all var(--t-mid);
+}
+.roadmap-step:hover { border-color: var(--gold-2); transform: translateX(-4px); }
+.roadmap-step.done { border-color: rgba(62, 207, 142, 0.35); background: rgba(62, 207, 142, 0.04); }
+.roadmap-step::before {
+  content: attr(data-step);
+  position: absolute; right: -36px; top: 50%;
+  transform: translateY(-50%);
+  width: 26px; height: 26px; border-radius: 50%;
+  background: var(--bg-3);
+  border: 2px solid var(--glass-border);
+  display: grid; place-items: center;
+  font-size: 0.72rem; font-weight: 800;
+  color: var(--text-2);
+  transition: all var(--t-mid);
+}
+.roadmap-step.done::before {
+  background: var(--grad-gold);
+  border-color: var(--gold-2);
+  color: #1a1206;
+}
+
+/* ================= 28. ARTICLE CARDS ================= */
+.article-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  padding: 20px;
+  cursor: pointer;
+  transition: all var(--t-mid);
+  display: flex; flex-direction: column; gap: 10px;
+  position: relative;
+}
+.article-card:hover { transform: translateY(-4px); border-color: var(--glass-border-2); box-shadow: var(--shadow-md); }
+.article-card h4 { font-size: 0.95rem; font-weight: 700; padding-left: 32px; }
+.article-card p { font-size: 0.82rem; color: var(--text-2); line-height: 1.7; flex: 1; }
+.article-meta { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.fav-btn {
+  position: absolute; top: 14px; left: 14px;
+  width: 30px; height: 30px; border-radius: 8px;
+  background: var(--bg-3);
+  color: var(--text-3);
+  display: grid; place-items: center;
+  font-size: 0.85rem;
+  transition: all var(--t-fast);
+  z-index: 2;
+}
+.fav-btn:hover { color: var(--gold-3); transform: scale(1.1); }
+.fav-btn.active { color: var(--gold-3); background: var(--gold-soft); }
+
+/* ================= 29. SESSION CLOCK ================= */
+.session-clock { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.session-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  padding: 16px; text-align: center;
+}
+.session-card .city { font-size: 0.85rem; color: var(--text-2); margin-bottom: 6px; }
+.session-card .time { font-size: 1.35rem; font-weight: 800; font-variant-numeric: tabular-nums; direction: ltr; }
+.session-card .status {
+  font-size: 0.7rem; margin-top: 8px;
+  padding: 3px 10px; border-radius: 6px;
+  display: inline-block;
+  font-weight: 600;
+}
+.session-open { background: var(--emerald-soft); color: var(--emerald); }
+.session-closed { background: var(--rose-soft); color: var(--rose); }
+
+/* ================= 30. XP / ACHIEVEMENTS ================= */
+.xp-wrap {
+  display: flex; align-items: center; gap: 12px;
+}
+.xp-level {
+  font-size: 0.82rem; font-weight: 800;
+  color: var(--gold-3);
+  white-space: nowrap;
+}
+.xp-bar {
+  flex: 1; height: 10px; border-radius: 5px;
+  background: var(--bg-3);
+  overflow: hidden;
+}
+.xp-fill {
+  height: 100%; border-radius: 5px;
+  background: var(--grad-gold);
+  transition: width 0.8s ease;
+  box-shadow: 0 0 10px var(--gold-glow);
+}
+.xp-text { font-size: 0.72rem; color: var(--text-2); white-space: nowrap; }
+
+.achievement {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+  padding: 14px 8px;
+  border-radius: var(--r-md);
+  border: 1px solid var(--glass-border);
+  background: var(--glass);
+  text-align: center;
+  transition: all var(--t-mid);
+  opacity: 0.4;
+}
+.achievement.unlocked {
+  opacity: 1;
+  border-color: var(--glass-border-2);
+  background: var(--gold-soft);
+  box-shadow: var(--shadow-gold);
+}
+.achievement .icon { font-size: 1.5rem; }
+.achievement .name { font-size: 0.72rem; font-weight: 600; color: var(--text-1); }
+
+/* ================= 31. CHECKLIST ================= */
+.check-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background var(--t-fast);
+  border: 1px solid transparent;
+}
+.check-item:hover { background: rgba(255,255,255,0.03); }
+.check-item.checked { background: var(--gold-soft); border-color: var(--glass-border-2); }
+.check-box {
+  width: 22px; height: 22px; border-radius: 7px;
+  border: 2px solid var(--text-3);
+  display: grid; place-items: center;
+  font-size: 0.72rem; color: transparent;
+  transition: all var(--t-fast);
+  flex-shrink: 0;
+}
+.check-item.checked .check-box {
+  background: var(--grad-gold);
+  border-color: var(--gold-2);
+  color: #1a1206;
+  font-weight: 800;
+}
+.check-label { font-size: 0.9rem; }
+.check-item.checked .check-label { color: var(--text-2); }
+
+/* ================= 32. MISC ================= */
+.divider { height: 1px; background: var(--glass-border); margin: 20px 0; }
+.flex-between { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.flex-center { display: flex; align-items: center; gap: 10px; }
+.mt-1 { margin-top: 8px; } .mt-2 { margin-top: 16px; } .mt-3 { margin-top: 24px; } .mt-4 { margin-top: 32px; }
+.mb-1 { margin-bottom: 8px; } .mb-2 { margin-bottom: 16px; } .mb-3 { margin-bottom: 24px; }
+.text-center { text-align: center; }
+.text-sm { font-size: 0.85rem; }
+.text-xs { font-size: 0.75rem; }
+.text-muted { color: var(--text-2); }
+.text-gold { color: var(--gold-3); }
+.text-emerald { color: var(--emerald); }
+.text-rose { color: var(--rose); }
+
+.stat-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-md);
+  padding: 18px;
+  text-align: center;
+  transition: all var(--t-mid);
+}
+.stat-card:hover { border-color: var(--glass-border-2); }
+.stat-value {
+  font-size: 1.7rem; font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  color: var(--gold-3);
+}
+.stat-label { font-size: 0.82rem; color: var(--text-2); margin-top: 4px; }
+
+.info-box, .warning-box, .danger-box {
+  border-radius: var(--r-md);
+  padding: 14px 18px;
+  font-size: 0.86rem;
+  display: flex; gap: 10px; align-items: flex-start;
+  line-height: 1.7;
+}
+.info-box { background: var(--sky-soft); border: 1px solid rgba(77, 166, 255, 0.25); color: #a5cdff; }
+.warning-box { background: rgba(240, 198, 116, 0.08); border: 1px solid rgba(240, 198, 116, 0.28); color: var(--gold-3); }
+.danger-box { background: var(--rose-soft); border: 1px solid rgba(239, 91, 120, 0.28); color: #ff9eb0; }
+.info-box i, .warning-box i, .danger-box i { flex-shrink: 0; margin-top: 2px; }
+
+.empty-state { text-align: center; padding: 48px 20px; color: var(--text-2); }
+.empty-state .icon { font-size: 3rem; margin-bottom: 12px; opacity: 0.4; color: var(--gold-3); }
+.empty-state h3 { font-size: 1.05rem; color: var(--text-1); margin-bottom: 6px; font-weight: 700; }
+.empty-state p { font-size: 0.85rem; margin-bottom: 16px; }
+
+.table-wrap { overflow-x: auto; border-radius: var(--r-md); border: 1px solid var(--glass-border); }
+table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+th {
+  background: var(--bg-3); padding: 12px 14px;
+  text-align: right; font-weight: 700;
+  color: var(--text-1);
+  white-space: nowrap;
+}
+td { padding: 12px 14px; border-top: 1px solid var(--glass-border); color: var(--text-1); }
+tr:hover td { background: rgba(255,255,255,0.02); }
+
+/* ================= 33. CALC RESULT ================= */
+.calc-result {
+  background: linear-gradient(135deg, rgba(212, 162, 76, 0.06), rgba(77, 166, 255, 0.03));
+  border: 1px solid var(--glass-border-2);
+  border-radius: var(--r-md);
+  padding: 16px;
+  margin-top: 16px;
+  animation: fadeIn 0.4s ease;
+}
+.calc-result-row {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 8px 0;
+  font-size: 0.9rem;
+}
+.calc-result-row:not(:last-child) { border-bottom: 1px dashed var(--glass-border); }
+.calc-result-value {
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+  direction: ltr;
+  color: var(--gold-3);
+}
+
+/* ================= 34. REVEAL ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+}
+.reveal.revealed { opacity: 1; transform: translateY(0); }
+
+/* ================= 35. FOOTER ================= */
+.footer {
+  position: relative; z-index: 5;
+  max-width: 1440px;
+  margin: 60px auto 0;
+  padding: 40px 2rem 30px;
+  border-top: 1px solid var(--glass-border);
+  text-align: center;
+}
+.footer-brand {
+  font-size: 1.4rem; font-weight: 800;
+  background: var(--grad-text);
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+.footer-tagline { color: var(--text-2); font-size: 0.85rem; margin-bottom: 20px; }
+.footer-links { display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-bottom: 20px; }
+.footer-links a { color: var(--text-2); font-size: 0.85rem; transition: color var(--t-fast); }
+.footer-links a:hover { color: var(--gold-3); }
+.footer-copy { color: var(--text-3); font-size: 0.78rem; }
+
+/* ================= 36. RESPONSIVE ================= */
+@media (max-width: 1100px) {
+  .hero { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+  .hero-visual { height: 380px; max-width: 480px; margin: 0 auto; }
+  .hero p { margin-left: auto; margin-right: auto; }
+  .hero-actions { justify-content: center; }
+}
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .bottom-nav { display: block; }
+  .fab { display: grid; }
+  .app { padding: 1rem 1.2rem 6rem; }
+  .nav-inner { padding: 0 1.2rem; }
+  .footer { padding: 32px 1.2rem 24px; }
+}
+@media (max-width: 640px) {
+  .brand-text small { display: none; }
+  .hero { padding: 30px 0 20px; }
+  .hero-visual { height: 320px; }
+  .hero-card-main { width: 280px; height: 200px; }
+  .hero-card-small-1, .hero-card-small-2 { width: 150px; height: 90px; }
+  .form-row { grid-template-columns: 1fr; }
+  .grid-3, .grid-4 { grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); }
+  .modal-body { padding: 20px; }
+  .modal-header { padding: 18px 20px; }
+  .chart-canvas-wrap { height: 260px; }
+}
+@media (max-width: 420px) {
+  .stat .num { font-size: 1.7rem; }
+  .chart-price { font-size: 1.2rem; }
+  .hero-card-main { width: 250px; height: 190px; }
+}
+
+/* ================= 37. REDUCED MOTION ================= */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  #bg-canvas { display: none; }
+  .bg-glow { display: none; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ================= 38. PRINT ================= */
+@media print {
+  #bg-canvas, .bg-grid-layer, .bg-glow, .top-nav, .bottom-nav, .fab,
+  .scroll-top, .toast-container, .search-overlay, .modal-overlay, .drawer {
+    display: none !important;
+  }
+  body { background: #fff; color: #000; }
+  .card, .feature-card, .stat-card { border: 1px solid #ccc; box-shadow: none; }
+}
+</style>
+</head>
+<body>
+
+<!-- Background -->
+<canvas id="bg-canvas" aria-hidden="true"></canvas>
+<div class="bg-grid-layer" aria-hidden="true"></div>
+<div class="bg-glow bg-glow-1" aria-hidden="true"></div>
+<div class="bg-glow bg-glow-2" aria-hidden="true"></div>
+
+<!-- Top Nav -->
+<nav class="top-nav">
+  <div class="nav-inner">
+    <a class="brand" href="#/home" onclick="navigate('home');return false;">
+      <div class="brand-mark">TM</div>
+      <div class="brand-text">
+        <strong>TradeMitek</strong>
+        <small>حرفه‌ای‌ترین ابزار ترید</small>
+      </div>
+    </a>
+    <div class="nav-links" id="navLinks"></div>
+    <div class="nav-actions">
+      <button class="icon-btn" onclick="openSearch()" aria-label="جستجو" title="جستجو (Ctrl+K)"><i class="fa-solid fa-magnifying-glass"></i></button>
+      <button class="icon-btn" onclick="navigate('favorites')" aria-label="علاقه‌مندی‌ها" title="علاقه‌مندی‌ها"><i class="fa-solid fa-star"></i></button>
+      <button class="icon-btn" onclick="navigate('settings')" aria-label="تنظیمات" title="تنظیمات"><i class="fa-solid fa-gear"></i></button>
+      <button class="icon-btn" onclick="toggleTheme()" aria-label="تغییر تم" id="themeBtn" title="تغییر تم"><i class="fa-solid fa-sun" id="themeIcon"></i></button>
+    </div>
+  </div>
+</nav>
+
+<!-- App Content -->
+<main class="app" id="app"></main>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-brand">TradeMitek</div>
+  <div class="footer-tagline">پلتفرم حرفه‌ای آموزش، تحلیل و ابزار ترید</div>
+  <div class="footer-links">
+    <a href="#/about" onclick="navigate('about');return false;">درباره ما</a>
+    <a href="#/contact" onclick="navigate('about');return false;">ارتباط با ما</a>
+    <a href="#/disclaimer" onclick="navigate('disclaimer');return false;">سلب مسئولیت</a>
+    <a href="#/settings" onclick="navigate('settings');return false;">تنظیمات</a>
+  </div>
+  <div class="footer-copy">
+    © ۲۰۲۵ TradeMitek — تمامی حقوق محفوظ است. ساخته‌شده توسط <span class="text-gold">امیرمحمد خدارضایی</span>
+  </div>
+</footer>
+
+<!-- Bottom Nav (Mobile) -->
+<nav class="bottom-nav">
+  <div class="bottom-nav-inner">
+    <button class="bottom-nav-item active" data-route="home" onclick="navigate('home')">
+      <span class="ic"><i class="fa-solid fa-house"></i></span><span>خانه</span>
+    </button>
+    <button class="bottom-nav-item" data-route="market" onclick="navigate('market')">
+      <span class="ic"><i class="fa-solid fa-chart-line"></i></span><span>بازار</span>
+    </button>
+    <button class="bottom-nav-item" data-route="tools" onclick="navigate('tools')">
+      <span class="ic"><i class="fa-solid fa-calculator"></i></span><span>ابزار</span>
+    </button>
+    <button class="bottom-nav-item" data-route="education" onclick="navigate('education')">
+      <span class="ic"><i class="fa-solid fa-graduation-cap"></i></span><span>آموزش</span>
+    </button>
+    <button class="bottom-nav-item" onclick="openDrawer()">
+      <span class="ic"><i class="fa-solid fa-bars"></i></span><span>بیشتر</span>
+    </button>
+  </div>
+</nav>
+
+<!-- FAB -->
+<button class="fab" onclick="openSearch()" aria-label="جستجو"><i class="fa-solid fa-magnifying-glass"></i></button>
+
+<!-- Scroll Top -->
+<button class="scroll-top" id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="بازگشت به بالا">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<!-- Search -->
+<div class="search-overlay" id="searchOverlay" onclick="if(event.target===this)closeSearch()">
+  <div class="search-box">
+    <div class="search-input-wrap">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="جستجو در آموزش‌ها، ابزارها، استراتژی‌ها..." oninput="performSearch(this.value)" autocomplete="off">
+      <button class="modal-close" onclick="closeSearch()" aria-label="بستن"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="search-results" id="searchResults"></div>
+    <div class="search-hint">
+      <span><kbd>Esc</kbd> بستن</span>
+      <span><kbd>Ctrl</kbd> + <kbd>K</kbd> باز کردن</span>
+    </div>
+  </div>
+</div>
+
+<!-- Drawer -->
+<div class="drawer" id="drawer" onclick="if(event.target===this)closeDrawer()">
+  <div class="drawer-bg" onclick="closeDrawer()"></div>
+  <div class="drawer-panel">
+    <div class="drawer-handle"></div>
+    <div class="drawer-item" onclick="navigate('dashboard');closeDrawer()"><span class="ic"><i class="fa-solid fa-table-columns"></i></span> داشبورد</div>
+    <div class="drawer-item" onclick="navigate('strategies');closeDrawer()"><span class="ic"><i class="fa-solid fa-chess"></i></span> استراتژی‌ها</div>
+    <div class="drawer-item" onclick="navigate('risk');closeDrawer()"><span class="ic"><i class="fa-solid fa-shield-halved"></i></span> مدیریت ریسک</div>
+    <div class="drawer-item" onclick="navigate('psychology');closeDrawer()"><span class="ic"><i class="fa-solid fa-brain"></i></span> روانشناسی</div>
+    <div class="drawer-item" onclick="navigate('dictionary');closeDrawer()"><span class="ic"><i class="fa-solid fa-book"></i></span> واژه‌نامه</div>
+    <div class="drawer-item" onclick="navigate('software');closeDrawer()"><span class="ic"><i class="fa-solid fa-laptop-code"></i></span> نرم‌افزارها</div>
+    <div class="drawer-item" onclick="navigate('journal');closeDrawer()"><span class="ic"><i class="fa-solid fa-pen-to-square"></i></span> ژورنال معاملات</div>
+    <div class="drawer-item" onclick="navigate('watchlist');closeDrawer()"><span class="ic"><i class="fa-solid fa-eye"></i></span> واچ‌لیست</div>
+    <div class="drawer-item" onclick="navigate('resources');closeDrawer()"><span class="ic"><i class="fa-solid fa-folder-open"></i></span> منابع</div>
+    <div class="drawer-item" onclick="navigate('settings');closeDrawer()"><span class="ic"><i class="fa-solid fa-gear"></i></span> تنظیمات</div>
+    <div class="drawer-item" onclick="navigate('about');closeDrawer()"><span class="ic"><i class="fa-solid fa-circle-info"></i></span> درباره ما</div>
+    <div class="drawer-item" onclick="navigate('disclaimer');closeDrawer()"><span class="ic"><i class="fa-solid fa-scale-balanced"></i></span> سلب مسئولیت</div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal-overlay" id="modalOverlay" onclick="if(event.target===this)closeModal()">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title" id="modalTitle">عنوان</div>
+      <button class="modal-close" onclick="closeModal()" aria-label="بستن"><i class="fa-solid fa-xmark"></i></button>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<!-- Toasts -->
+<div class="toast-container" id="toasts"></div>
+
+<script>
+/* ============================================================
+   TradeMitek — Core Application
+   Author: AmirMohammad Khodarezaei
+   Support: Armin Alinaghi
+   ============================================================ */
+(function () {
+'use strict';
+
+/* ================= UTILS ================= */
+const $ = (s) => document.querySelector(s);
+const $$ = (s) => document.querySelectorAll(s);
+
+function safeGet(key, fallback) {
+  try {
+    const raw = localStorage.getItem(key);
+    return raw ? JSON.parse(raw) : fallback;
+  } catch (e) { return fallback; }
+}
+function safeSet(key, val) {
+  try { localStorage.setItem(key, JSON.stringify(val)); } catch (e) {}
+}
+function fmt(n, dec) {
+  if (dec === undefined) dec = 2;
+  if (n === null || n === undefined || isNaN(n)) return '—';
+  return Number(n).toLocaleString('en-US', { maximumFractionDigits: dec });
+}
+function fmtFa(n) {
+  if (n === null || n === undefined || isNaN(n)) return '—';
+  return Number(n).toLocaleString('fa-IR');
+}
+function escapeHtml(s) {
+  return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[c]));
+}
+function uid(p) { return (p || 'id') + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); }
+
+/* ================= STORAGE KEYS ================= */
+const KEYS = {
+  theme: 'tm_theme',
+  notes: 'tm_notes',
+  journal: 'tm_journal',
+  watchlist: 'tm_watchlist',
+  favorites: 'tm_favorites',
+  progress: 'tm_progress',
+  checklist: 'tm_checklist',
+  xp: 'tm_xp',
+  achievements: 'tm_achievements',
+  recent: 'tm_recent',
+  welcomed: 'tm_welcomed'
+};
+
+/* ================= STATE ================= */
+const State = {
+  theme: safeGet(KEYS.theme, 'dark'),
+  notes: safeGet(KEYS.notes, []),
+  journal: safeGet(KEYS.journal, []),
+  watchlist: safeGet(KEYS.watchlist, ['BTCUSDT', 'ETHUSDT', 'XAUUSD', 'EURUSD']),
+  favorites: safeGet(KEYS.favorites, []),
+  progress: safeGet(KEYS.progress, {}),
+  checklist: safeGet(KEYS.checklist, {}),
+  xp: safeGet(KEYS.xp, 0),
+  achievements: safeGet(KEYS.achievements, {}),
+  recent: safeGet(KEYS.recent, [])
+};
+const keyMap = {
+  notes: KEYS.notes, journal: KEYS.journal, watchlist: KEYS.watchlist,
+  favorites: KEYS.favorites, progress: KEYS.progress, checklist: KEYS.checklist,
+  xp: KEYS.xp, achievements: KEYS.achievements, recent: KEYS.recent, theme: KEYS.theme
+};
+function save(k) { if (keyMap[k]) safeSet(keyMap[k], State[k]); }
+
+/* ================= DATA ================= */
+const ARTICLES = [
+  { id:'a1', title:'ترید چیست و چگونه شروع کنیم؟', cat:'مفاهیم پایه', level:'beginner', desc:'آشنایی با مفهوم ترید، تفاوت با سرمایه‌گذاری و مسیر شروع حرفه‌ای.', read:6 },
+  { id:'a2', title:'بازارهای مالی و انواع آن', cat:'مفاهیم پایه', level:'beginner', desc:'مروری بر فارکس، کریپتو، سهام، شاخص‌ها و کالاها.', read:7 },
+  { id:'a3', title:'فارکس؛ از صفر تا اجرا', cat:'فارکس', level:'beginner', desc:'جفت‌ارز، پیپ، لات و سشن‌های معاملاتی.', read:8 },
+  { id:'a4', title:'کریپتوکارنسی؛ راهنمای کامل', cat:'کریپتو', level:'beginner', desc:'بیت‌کوین، اتریوم، کیف پول و صرافی‌ها.', read:9 },
+  { id:'a5', title:'سهام، ETF و شاخص‌ها', cat:'سهام', level:'intermediate', desc:'ساختار بازار سهام و شاخص‌های جهانی.', read:7 },
+  { id:'a6', title:'طلا، نفت و کالاها', cat:'کالاها', level:'beginner', desc:'معامله کالا در بازارهای جهانی.', read:6 },
+  { id:'a7', title:'اصول نمودارخوانی حرفه‌ای', cat:'تحلیل تکنیکال', level:'beginner', desc:'کندل‌استیک، تایم‌فریم و ساختار نمودار.', read:10 },
+  { id:'a8', title:'حمایت، مقاومت و روانشناسی سطوح', cat:'تحلیل تکنیکال', level:'beginner', desc:'نقاط کلیدی عرضه و تقاضا.', read:8 },
+  { id:'a9', title:'روند و خطوط روند', cat:'تحلیل تکنیکال', level:'intermediate', desc:'تشخیص روند صعودی، نزولی و خنثی.', read:8 },
+  { id:'a10', title:'میانگین متحرک (MA) کاربردی', cat:'تحلیل تکنیکال', level:'intermediate', desc:'MA و کاربرد آن در تشخیص روند.', read:9 },
+  { id:'a11', title:'RSI و قدرت بازار', cat:'تحلیل تکنیکال', level:'intermediate', desc:'قدرت خریداران و فروشندگان با RSI.', read:7 },
+  { id:'a12', title:'MACD و واگرایی', cat:'تحلیل تکنیکال', level:'advanced', desc:'همگرایی و واگرایی میانگین‌های متحرک.', read:8 },
+  { id:'a13', title:'تحلیل بنیادی و اخبار', cat:'تحلیل بنیادی', level:'intermediate', desc:'اخبار، داده‌های اقتصادی و تأثیر آن‌ها.', read:9 },
+  { id:'a14', title:'مدیریت سرمایه؛ پایه موفقیت', cat:'مدیریت سرمایه', level:'beginner', desc:'اصول اولیه حفظ سرمایه و تعیین ریسک.', read:8 },
+  { id:'a15', title:'روانشناسی ترید', cat:'روانشناسی', level:'beginner', desc:'کنترل احساسات و تصمیم‌گیری منطقی.', read:7 },
+  { id:'a16', title:'ژورنال‌نویسی معاملاتی', cat:'ژورنال‌نویسی', level:'beginner', desc:'ثبت، تحلیل و بهبود عملکرد.', read:6 },
+  { id:'a17', title:'بک‌تست؛ ارزیابی استراتژی', cat:'بک‌تست', level:'intermediate', desc:'ارزیابی استراتژی با داده‌های تاریخی.', read:8 },
+  { id:'a18', title:'مدیریت معامله باز', cat:'مدیریت معامله', level:'advanced', desc:'جابجایی حد ضرر و خروج پله‌ای.', read:7 },
+  { id:'a19', title:'اهرم، مارجین و ریسک', cat:'مدیریت سرمایه', level:'intermediate', desc:'درک اهرم و خطرات آن.', read:6 },
+  { id:'a20', title:'پرایس اکشن ناب', cat:'تحلیل تکنیکال', level:'advanced', desc:'خواندن رفتار قیمت بدون اندیکاتور.', read:10 }
+];
+
+const STRATEGIES = [
+  { id:'s1', name:'روندی (Trend Following)', cat:'Trend Following', level:'intermediate',
+    concept:'معامله در جهت روند اصلی با میانگین‌های متحرک.',
+    conditions:'بازار رونددار، تایم‌فریم متوسط تا بالا.',
+    tools:'MA ۵۰ و ۲۰۰، خطوط روند', pros:'سادگی قوانین، احتمال捕获 حرکات بزرگ',
+    cons:'در بازار خنثی ضررده', scenario:'قیمت بالای MA200، پول‌بک به MA50 و ادامه.',
+    backtest:'حداقل ۱۰۰ معامله در ۳ سال.', risk:'ریسک ۱٪ در هر معامله.' },
+  { id:'s2', name:'شکست (Breakout)', cat:'Breakout', level:'intermediate',
+    concept:'ورود پس از شکست سطوح کلیدی با تأیید.',
+    conditions:'فشردگی، نزدیکی به سطوح کلیدی.', tools:'سطوح، حجم، ATR',
+    pros:'ورود در ابتدای حرکت', cons:'شکست‌های کاذب',
+    scenario:'شکست مقاومت با کندل قوی.', backtest:'نرخ شکست کاذب در جفت‌ارزها.',
+    risk:'ریسک ۰.۵–۱٪.' },
+  { id:'s3', name:'پول‌بک (Pullback)', cat:'Pullback', level:'beginner',
+    concept:'ورود در اصلاح پس از حرکت قوی.',
+    conditions:'روند مشخص، اصلاح به سطح.', tools:'فیبوناچی، MA',
+    pros:'ورود با ریسک کم', cons:'خطر ادامه اصلاح',
+    scenario:'روند صعودی، اصلاح به ۶۱.۸٪.', backtest:'نرخ موفقیت سطوح فیبو.',
+    risk:'ریسک ۱٪.' },
+  { id:'s4', name:'حمایت/مقاومت', cat:'Support & Resistance', level:'beginner',
+    concept:'معامله در سطوح کلیدی واکنش قیمت.',
+    conditions:'سطوح واضح و واکنش‌های قبلی.', tools:'خطوط افقی، کندل برگشتی',
+    pros:'ساده و قابل یادگیری', cons:'نیاز به تجربه',
+    scenario:'برخورد سوم به مقاومت.', backtest:'ثبت واکنش‌ها.',
+    risk:'ریسک ۰.۵–۱٪.' },
+  { id:'s5', name:'تقاطع میانگین متحرک', cat:'Moving Average', level:'intermediate',
+    concept:'تقاطع یا واکنش به MA برای ورود.',
+    conditions:'روند مشخص.', tools:'MA20/MA50/MA200',
+    pros:'عینی و قابل بک‌تست', cons:'در بازار خنثی اشتباه',
+    scenario:'تقاطع طلایی MA50 و MA200.', backtest:'مقایسه دوره‌ها.',
+    risk:'ریسک ۱٪.' },
+  { id:'s6', name:'RSI و واگرایی', cat:'RSI', level:'intermediate',
+    concept:'معامله بر اساس اشباع و واگرایی.',
+    conditions:'بازار رنج یا روند ضعیف.', tools:'RSI14',
+    pros:'سیگنال زودتر', cons:'در روند قوی اشتباه',
+    scenario:'واگرایی مثبت در کف رنج.', backtest:'تایم‌فریم مختلف.',
+    risk:'ریسک ۰.۵–۱٪.' },
+  { id:'s7', name:'MACD و کراس', cat:'MACD', level:'advanced',
+    concept:'هیستوگرام و کراس MACD.',
+    conditions:'روند متوسط.', tools:'MACD(12,26,9)',
+    pros:'تأیید روند', cons:'تأخیر در ورود',
+    scenario:'کراس صعودی بالای صفر.', backtest:'مقایسه با سایر اندیکاتورها.',
+    risk:'ریسک ۱٪.' },
+  { id:'s8', name:'پرایس اکشن', cat:'Price Action', level:'advanced',
+    concept:'خواندن ساختار و الگوها بدون اندیکاتور.',
+    conditions:'هر بازار با نقدینگی.', tools:'کندل، ساختار',
+    pros:'بدون تأخیر', cons:'نیاز به تجربه',
+    scenario:'پین‌بار در سطح کلیدی.', backtest:'الگوهای پرتکرار.',
+    risk:'ریسک ۰.۵–۱٪.' },
+  { id:'s9', name:'اسکالپینگ', cat:'Scalping', level:'advanced',
+    concept:'معاملات کوتاه با تعداد بالا.',
+    conditions:'نقدینگی بالا، اسپرد کم.', tools:'تایم ۱–۵ دقیقه',
+    pros:'سود سریع', cons:'استرس و کارمزد',
+    scenario:'شکست میکرو M1.', backtest:'حساس به اسپرد.',
+    risk:'ریسک ۰.۲۵–۰.۵٪.' },
+  { id:'s10', name:'سوئینگ تریدینگ', cat:'Swing', level:'intermediate',
+    concept:'نگهداری چند روز تا چند هفته.',
+    conditions:'روند متوسط.', tools:'سطوح، MA, RSI',
+    pros:'R/R بالا', cons:'ریسک اخبار شبانه',
+    scenario:'پول‌بک در روند روزانه.', backtest:'دوره ۶ ماهه.',
+    risk:'ریسک ۱–۲٪.' }
+];
+
+const GLOSSARY = [
+  { en:'Spread', fa:'اسپرد', def:'تفاوت قیمت خرید و فروش که هزینه غیرمستقیم معامله است.' },
+  { en:'Leverage', fa:'اهرم', def:'استفاده از سرمایه قرضی برای بزرگ‌تر کردن حجم معامله.' },
+  { en:'Margin', fa:'مارجین', def:'مبلغ وثیقه برای باز کردن معامله با اهرم.' },
+  { en:'Lot', fa:'لات', def:'واحد اندازه‌گیری حجم معامله در فارکس.' },
+  { en:'Pip', fa:'پیپ', def:'کوچک‌ترین واحد تغییر قیمت در جفت‌ارزها.' },
+  { en:'Stop Loss', fa:'حد ضرر', def:'سفارش خودکار برای محدود کردن زیان.' },
+  { en:'Take Profit', fa:'حد سود', def:'سفارش خودکار برای تأمین سود.' },
+  { en:'Drawdown', fa:'افت سرمایه', def:'کاهش سرمایه از اوج تا کف.' },
+  { en:'Equity', fa:'ارزش خالص', def:'موجودی حساب به علاوه سود/زیان شناور.' },
+  { en:'Balance', fa:'موجودی', def:'مبلغ نقدی حساب بدون سود/زیان شناور.' },
+  { en:'Liquidity', fa:'نقدینگی', def:'سهولت خرید و فروش بدون تأثیر بر قیمت.' },
+  { en:'Volatility', fa:'نوسان', def:'میزان تغییرات قیمت در یک دوره.' },
+  { en:'Slippage', fa:'لغزش قیمت', def:'تفاوت قیمت مورد انتظار و اجرای واقعی.' },
+  { en:'Swap', fa:'سوآپ', def:'هزینه یا اعتبار شبانه.' },
+  { en:'Commission', fa:'کمیسیون', def:'کارمزد مستقیم هر معامله.' },
+  { en:'Risk/Reward', fa:'ریسک به ریوارد', def:'نسبت حد ضرر به حد سود.' },
+  { en:'Win Rate', fa:'نرخ برد', def:'درصد معاملات سودده.' },
+  { en:'Position Size', fa:'حجم موقعیت', def:'مقدار معامله بر اساس ریسک.' },
+  { en:'Market Order', fa:'سفارش بازار', def:'خرید/فروش با بهترین قیمت.' },
+  { en:'Limit Order', fa:'سفارش محدود', def:'سفارش با قیمت مشخص.' },
+  { en:'Stop Order', fa:'سفارش استاپ', def:'فعال شدن سفارش با رسیدن قیمت.' },
+  { en:'Bull Market', fa:'بازار صعودی', def:'روند کلی صعودی.' },
+  { en:'Bear Market', fa:'بازار نزولی', def:'روند کلی نزولی.' },
+  { en:'Support', fa:'حمایت', def:'سطح احتمالی توقف ریزش.' },
+  { en:'Resistance', fa:'مقاومت', def:'سطح احتمالی توقف رشد.' },
+  { en:'Breakout', fa:'شکست', def:'عبور از سطح کلیدی.' },
+  { en:'Pullback', fa:'پول‌بک', def:'اصلاح موقت خلاف روند.' },
+  { en:'Trend', fa:'روند', def:'جهت کلی حرکت قیمت.' },
+  { en:'Range', fa:'رنج', def:'بازار بدون روند مشخص.' }
+];
+
+const TOOLS_LIST = [
+  { id:'t1', name:'محاسبه‌گر ریسک', icon:'fa-triangle-exclamation', desc:'تعیین حجم بر اساس درصد ریسک و حد ضرر.' },
+  { id:'t2', name:'محاسبه حجم معامله', icon:'fa-ruler-combined', desc:'حجم دقیق بر اساس سرمایه و ریسک.' },
+  { id:'t3', name:'نسبت ریسک به ریوارد', icon:'fa-scale-balanced', desc:'مقایسه حد ضرر و حد سود.' },
+  { id:'t4', name:'محاسبه حد ضرر', icon:'fa-hand', desc:'تعیین فاصله مناسب حد ضرر.' },
+  { id:'t5', name:'محاسبه حد سود', icon:'fa-bullseye', desc:'هدف سود بر اساس R/R.' },
+  { id:'t6', name:'درصد سود و زیان', icon:'fa-percent', desc:'محاسبه درصد تغییر سرمایه.' },
+  { id:'t7', name:'محاسبه کارمزد', icon:'fa-coins', desc:'برآورد هزینه کارمزد معاملات.' },
+  { id:'t8', name:'سرمایه مورد نیاز', icon:'fa-wallet', desc:'سرمایه لازم برای شروع.' },
+  { id:'t9', name:'افت سرمایه (Drawdown)', icon:'fa-arrow-trend-down', desc:'محاسبه درصد افت از اوج.' },
+  { id:'t10', name:'سود/زیان فرضی', icon:'fa-flask', desc:'محاسبه نتیجه فرضی یک معامله.' }
+];
+
+const SOFTWARE = [
+  { id:'sw1', name:'MetaTrader 4', icon:'fa-desktop', desc:'پلتفرم محبوب فارکس با پشتیبانی از اکسپرت‌ها.', platform:'ویندوز، مک، موبایل', suitable:'فارکس' },
+  { id:'sw2', name:'MetaTrader 5', icon:'fa-desktop', desc:'نسخه پیشرفته MT4 با تایم‌فریم بیشتر.', platform:'ویندوز، مک، موبایل', suitable:'فارکس و CFD' },
+  { id:'sw3', name:'TradingView', icon:'fa-chart-line', desc:'پلتفرم نمودار پیشرفته با ابزارهای تحلیل.', platform:'وب، موبایل، دسکتاپ', suitable:'همه بازارها' },
+  { id:'sw4', name:'cTrader', icon:'fa-bolt', desc:'پلتفرم مدرن با اجرای سریع.', platform:'ویندوز، مک، موبایل', suitable:'فارکس و CFD' },
+  { id:'sw5', name:'Binance', icon:'fa-bitcoin-sign', desc:'بزرگ‌ترین صرافی ارز دیجیتال.', platform:'وب، موبایل', suitable:'کریپتو' },
+  { id:'sw6', name:'CoinMarketCap', icon:'fa-chart-pie', desc:'مرجع قیمت ارزهای دیجیتال.', platform:'وب، موبایل', suitable:'اطلاعات بازار' },
+  { id:'sw7', name:'CoinGecko', icon:'fa-dragon', desc:'رهگیری قیمت و داده کریپتو.', platform:'وب، موبایل', suitable:'تحلیل کریپتو' }
+];
+
+const ROADMAP = [
+  { n:'۱', title:'آشنایی با بازار', desc:'درک کلی از بازارهای مالی.' },
+  { n:'۲', title:'مفاهیم پایه', desc:'پیپ، لات، اهرم، مارجین.' },
+  { n:'۳', title:'نمودارخوانی', desc:'کندل‌استیک، تایم‌فریم.' },
+  { n:'۴', title:'تحلیل تکنیکال', desc:'سطوح، روند، اندیکاتورها.' },
+  { n:'۵', title:'مدیریت ریسک', desc:'حجم، حد ضرر، سرمایه.' },
+  { n:'۶', title:'استراتژی', desc:'طراحی و انتخاب استراتژی.' },
+  { n:'۷', title:'بک‌تست', desc:'ارزیابی با داده تاریخی.' },
+  { n:'۸', title:'ژورنال‌نویسی', desc:'ثبت و تحلیل معاملات.' },
+  { n:'۹', title:'حساب آزمایشی', desc:'تمرین بدون ریسک.' },
+  { n:'۱۰', title:'ارزیابی عملکرد', desc:'بررسی آماری و اصلاح.' }
+];
+
+const ACHIEVEMENTS = [
+  { id:'first_lesson', name:'اولین درس', icon:'fa-book-open', desc:'اولین درس را تکمیل کنید.' },
+  { id:'first_journal', name:'اولین ژورنال', icon:'fa-pen', desc:'اولین معامله را ثبت کنید.' },
+  { id:'ten_lessons', name:'۱۰ درس کامل', icon:'fa-graduation-cap', desc:'۱۰ درس را تکمیل کنید.' },
+  { id:'seven_days', name:'۷ روز فعالیت', icon:'fa-fire', desc:'۷ روز متوالی فعال باشید.' },
+  { id:'roadmap_full', name:'مسیر کامل', icon:'fa-trophy', desc:'تمام مراحل مسیر را کامل کنید.' },
+  { id:'quiz_master', name:'استاد کوییز', icon:'fa-medal', desc:'۱۰ چک‌لیست را تکمیل کنید.' }
+];
+
+const NAV_ITEMS = [
+  { route:'home', label:'خانه' },
+  { route:'dashboard', label:'داشبورد' },
+  { route:'education', label:'آموزش' },
+  { route:'tools', label:'ابزارها' },
+  { route:'market', label:'بازار' },
+  { route:'strategies', label:'استراتژی' },
+  { route:'risk', label:'ریسک' },
+  { route:'psychology', label:'روانشناسی' },
+  { route:'dictionary', label:'واژه‌نامه' },
+  { route:'journal', label:'ژورنال' }
+];
+
+/* ================= MARKET ENGINE (realistic simulated) ================= */
+const MarketEngine = {
+  base: {
+    'BTCUSDT': { price: 67420, vol: 0.0042, icon: 'fa-bitcoin-sign', color: '#f7931a', name: 'بیت‌کوین' },
+    'ETHUSDT': { price: 3485, vol: 0.0050, icon: 'fa-ethereum', color: '#8a92b2', name: 'اتریوم' },
+    'XAUUSD': { price: 2412.5, vol: 0.0018, icon: 'fa-coins', color: '#d4a24c', name: 'طلا' },
+    'EURUSD': { price: 1.0854, vol: 0.0009, icon: 'fa-euro-sign', color: '#4da6ff', name: 'یورو/دلار' },
+    'GBPUSD': { price: 1.2712, vol: 0.0010, icon: 'fa-sterling-sign', color: '#7c5cff', name: 'پوند/دلار' },
+    'USDJPY': { price: 156.42, vol: 0.0011, icon: 'fa-yen-sign', color: '#ef5b78', name: 'دلار/ین' },
+    'SOLUSDT': { price: 168.30, vol: 0.0080, icon: 'fa-sun', color: '#14f195', name: 'سولانا' },
+    'XAGUSD': { price: 30.48, vol: 0.0025, icon: 'fa-coins', color: '#c3cbdb', name: 'نقره' }
+  },
+  live: {},
+  init() {
+    const now = Date.now();
+    Object.keys(this.base).forEach(sym => {
+      const b = this.base[sym];
+      this.live[sym] = {
+        symbol: sym,
+        name: b.name,
+        icon: b.icon,
+        color: b.color,
+        price: b.price,
+        open: b.price * (1 + (Math.random() - 0.5) * b.vol * 6),
+        vol: b.vol,
+        candles: []
+      };
+      // seed historical candles
+      let p = this.live[sym].open;
+      for (let i = 0; i < 60; i++) {
+        const o = p;
+        const c = o * (1 + (Math.random() - 0.5) * b.vol * 2);
+        const h = Math.max(o, c) * (1 + Math.random() * b.vol);
+        const l = Math.min(o, c) * (1 - Math.random() * b.vol);
+        this.live[sym].candles.push({ o, h, l, c, t: now - (60 - i) * 60000 });
+        p = c;
+      }
+      this.live[sym].price = p;
+    });
+  },
+  tick() {
+    Object.keys(this.live).forEach(sym => {
+      const m = this.live[sym];
+      const drift = (Math.random() - 0.5) * m.vol * 0.4;
+      m.price = m.price * (1 + drift);
+      const last = m.candles[m.candles.length - 1];
+      const o = last.c;
+      const c = m.price;
+      const h = Math.max(o, c, last.h);
+      const l = Math.min(o, c, last.l);
+      last.h = h; last.l = l; last.c = c;
+      // new candle sometimes
+      if (Math.random() < 0.12) {
+        const no = c;
+        const nc = no * (1 + (Math.random() - 0.5) * m.vol);
+        m.candles.push({ o: no, h: Math.max(no, nc), l: Math.min(no, nc), c: nc, t: Date.now() });
+        if (m.candles.length > 90) m.candles.shift();
+      }
+    });
+  },
+  getChange(sym) {
+    const m = this.live[sym];
+    if (!m) return 0;
+    return ((m.price - m.open) / m.open) * 100;
+  }
+};
+MarketEngine.init();
+
+/* ================= CANVAS BACKGROUND (Particles) ================= */
+function initBgCanvas() {
+  const canvas = document.getElementById('bg-canvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d', { alpha: true });
+  let W, H, particles = [], raf = null;
+  const isMobile = window.matchMedia('(max-width: 768px)').matches;
+  const COUNT = isMobile ? 32 : 65;
+  const MAX_DIST = isMobile ? 100 : 140;
+  let mouse = { x: -9999, y: -9999 };
+
+  function resize() {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = window.innerWidth; H = window.innerHeight;
+    canvas.width = W * dpr; canvas.height = H * dpr;
+    canvas.style.width = W + 'px'; canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  function seed() {
+    particles = [];
+    for (let i = 0; i < COUNT; i++) {
+      particles.push({
+        x: Math.random() * W,
+        y: Math.random() * H,
+        vx: (Math.random() - 0.5) * 0.32,
+        vy: (Math.random() - 0.5) * 0.32,
+        r: Math.random() * 1.4 + 0.5
+      });
+    }
+  }
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+    // connections
+    for (let i = 0; i < particles.length; i++) {
+      const p1 = particles[i];
+      for (let j = i + 1; j < particles.length; j++) {
+        const p2 = particles[j];
+        const dx = p1.x - p2.x, dy = p1.y - p2.y;
+        const d = Math.sqrt(dx*dx + dy*dy);
+        if (d < MAX_DIST) {
+          const a = (1 - d / MAX_DIST) * 0.22;
+          ctx.strokeStyle = 'rgba(212, 162, 76, ' + a + ')';
+          ctx.lineWidth = 0.5;
+          ctx.beginPath();
+          ctx.moveTo(p1.x, p1.y);
+          ctx.lineTo(p2.x, p2.y);
+          ctx.stroke();
+        }
+      }
+    }
+    // particles
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0 || p.x > W) p.vx *= -1;
+      if (p.y < 0 || p.y > H) p.vy *= -1;
+      // mouse interaction
+      const mdx = p.x - mouse.x, mdy = p.y - mouse.y;
+      const md = Math.sqrt(mdx*mdx + mdy*mdy);
+      let glow = 0;
+      if (md < 130 && md > 0) {
+        glow = (1 - md / 130) * 0.8;
+        p.x += (mdx / md) * glow * 0.8;
+        p.y += (mdy / md) * glow * 0.8;
+      }
+      // draw glow
+      const r = p.r + glow * 1.5;
+      const grad = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r * 5);
+      grad.addColorStop(0, 'rgba(240, 198, 116, ' + (0.55 + glow * 0.4) + ')');
+      grad.addColorStop(1, 'rgba(212, 162, 76, 0)');
+      ctx.fillStyle = grad;
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r * 5, 0, Math.PI * 2);
+      ctx.fill();
+      // core
+      ctx.fillStyle = 'rgba(245, 214, 137, ' + (0.85 + glow * 0.15) + ')';
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, r, 0, Math.PI * 2);
+      ctx.fill();
+    }
+    raf = requestAnimationFrame(draw);
+  }
+  function onVis() {
+    if (document.hidden) { if (raf) { cancelAnimationFrame(raf); raf = null; } }
+    else if (!raf) { raf = requestAnimationFrame(draw); }
+  }
+  window.addEventListener('resize', () => { resize(); seed(); }, { passive: true });
+  window.addEventListener('mousemove', (e) => { mouse.x = e.clientX; mouse.y = e.clientY; }, { passive: true });
+  window.addEventListener('mouseleave', () => { mouse.x = -9999; mouse.y = -9999; }, { passive: true });
+  document.addEventListener('visibilitychange', onVis);
+  resize(); seed();
+  raf = requestAnimationFrame(draw);
+}
+
+/* ================= LIVE CHART ENGINE ================= */
+const ChartEngine = {
+  canvas: null, ctx: null,
+  symbol: 'BTCUSDT', tf: 'M1', paused: false,
+  raf: null, lastCandleTime: 0,
+  init(canvasId) {
+    this.canvas = document.getElementById(canvasId);
+    if (!this.canvas) return;
+    this.ctx = this.canvas.getContext('2d');
+    this.resize();
+    window.addEventListener('resize', () => this.resize(), { passive: true });
+    this.loop();
+  },
+  resize() {
+    if (!this.canvas) return;
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    const rect = this.canvas.parentElement.getBoundingClientRect();
+    this.canvas.width = rect.width * dpr;
+    this.canvas.height = rect.height * dpr;
+    this.canvas.style.width = rect.width + 'px';
+    this.canvas.style.height = rect.height + 'px';
+    this.ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  },
+  setSymbol(s) { this.symbol = s; this.resize(); },
+  setTf(t) { this.tf = t; },
+  loop() {
+    if (!this.paused) {
+      this.draw();
+    }
+    this.raf = requestAnimationFrame(() => this.loop());
+  },
+  draw() {
+    if (!this.ctx) return;
+    const ctx = this.ctx;
+    const W = this.canvas.clientWidth;
+    const H = this.canvas.clientHeight;
+    ctx.clearRect(0, 0, W, H);
+    const m = MarketEngine.live[this.symbol];
+    if (!m) return;
+    const candles = m.candles;
+    if (!candles.length) return;
+
+    // find min/max
+    let min = Infinity, max = -Infinity;
+    for (const c of candles) {
+      if (c.l < min) min = c.l;
+      if (c.h > max) max = c.h;
+    }
+    const pad = (max - min) * 0.12 || 1;
+    min -= pad; max += pad;
+    const range = max - min;
+
+    // grid
+    ctx.strokeStyle = 'rgba(212, 162, 76, 0.06)';
+    ctx.lineWidth = 1;
+    for (let i = 0; i <= 4; i++) {
+      const y = (H / 4) * i;
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+    }
+
+    // candles
+    const padX = 10;
+    const cw = (W - padX * 2) / candles.length;
+    for (let i = 0; i < candles.length; i++) {
+      const c = candles[i];
+      const x = padX + i * cw + cw / 2;
+      const yO = H - ((c.o - min) / range) * H;
+      const yC = H - ((c.c - min) / range) * H;
+      const yH = H - ((c.h - min) / range) * H;
+      const yL = H - ((c.l - min) / range) * H;
+      const up = c.c >= c.o;
+      const wickColor = up ? 'rgba(62, 207, 142, 0.7)' : 'rgba(239, 91, 120, 0.7)';
+      ctx.strokeStyle = wickColor;
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(x, yH);
+      ctx.lineTo(x, yL);
+      ctx.stroke();
+      const bw = Math.max(2, cw * 0.55);
+      const top = Math.min(yO, yC);
+      const h = Math.max(1, Math.abs(yC - yO));
+      const grad = ctx.createLinearGradient(x - bw/2, top, x + bw/2, top + h);
+      if (up) {
+        grad.addColorStop(0, 'rgba(62, 207, 142, 1)');
+        grad.addColorStop(1, 'rgba(34, 160, 107, 0.75)');
+      } else {
+        grad.addColorStop(0, 'rgba(239, 91, 120, 1)');
+        grad.addColorStop(1, 'rgba(192, 57, 43, 0.75)');
+      }
+      ctx.fillStyle = grad;
+      ctx.fillRect(x - bw/2, top, bw, h);
+    }
+
+    // last price line
+    const last = candles[candles.length - 1];
+    const yLast = H - ((last.c - min) / range) * H;
+    ctx.strokeStyle = 'rgba(240, 198, 116, 0.65)';
+    ctx.setLineDash([4, 4]);
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.moveTo(0, yLast);
+    ctx.lineTo(W, yLast);
+    ctx.stroke();
+    ctx.setLineDash([]);
+    // label
+    const label = fmt(last.c, last.c > 100 ? 2 : last.c > 10 ? 3 : 5);
+    ctx.font = '700 11px "Segoe UI", sans-serif';
+    const tw = ctx.measureText(label).width + 14;
+    const lx = 6;
+    const ly = Math.max(14, Math.min(H - 14, yLast));
+    const grad2 = ctx.createLinearGradient(lx, ly - 10, lx + tw, ly + 10);
+    grad2.addColorStop(0, '#d4a24c');
+    grad2.addColorStop(1, '#f0c674');
+    ctx.fillStyle = grad2;
+    ctx.beginPath();
+    if (ctx.roundRect) ctx.roundRect(lx, ly - 10, tw, 20, 5);
+    else ctx.rect(lx, ly - 10, tw, 20);
+    ctx.fill();
+    ctx.fillStyle = '#1a1206';
+    ctx.fillText(label, lx + 7, ly + 4);
+  }
+};
+
+/* ================= CHARTS IN HERO CARDS ================= */
+function drawMiniChart(canvas, symbol, positive) {
+  if (!canvas) return;
+  const dpr = Math.min(window.devicePixelRatio || 1, 2);
+  const W = canvas.clientWidth || 200;
+  const H = canvas.clientHeight || 60;
+  canvas.width = W * dpr; canvas.height = H * dpr;
+  const ctx = canvas.getContext('2d');
+  ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  ctx.clearRect(0, 0, W, H);
+  const m = MarketEngine.live[symbol];
+  if (!m) return;
+  const data = m.candles.slice(-30).map(c => c.c);
+  const min = Math.min(...data), max = Math.max(...data);
+  const range = max - min || 1;
+  const color = positive ? '#3ecf8e' : '#ef5b78';
+  // area
+  ctx.beginPath();
+  data.forEach((v, i) => {
+    const x = (i / (data.length - 1)) * W;
+    const y = H - ((v - min) / range) * (H - 8) - 4;
+    if (i === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  });
+  ctx.lineTo(W, H);
+  ctx.lineTo(0, H);
+  ctx.closePath();
+  const grad = ctx.createLinearGradient(0, 0, 0, H);
+  grad.addColorStop(0, positive ? 'rgba(62, 207, 142, 0.35)' : 'rgba(239, 91, 120, 0.35)');
+  grad.addColorStop(1, 'rgba(0,0,0,0)');
+  ctx.fillStyle = grad;
+  ctx.fill();
+  // line
+  ctx.beginPath();
+  data.forEach((v, i) => {
+    const x = (i / (data.length - 1)) * W;
+    const y = H - ((v - min) / range) * (H - 8) - 4;
+    if (i === 0) ctx.moveTo(x, y);
+    else ctx.lineTo(x, y);
+  });
+  ctx.strokeStyle = color;
+  ctx.lineWidth = 1.8;
+  ctx.lineJoin = 'round';
+  ctx.stroke();
+}
+
+/* ================= ROUTER ================= */
+let currentRoute = 'home';
+const VALID_ROUTES = ['home','dashboard','education','tools','market','strategies','risk','psychology','dictionary','software','resources','about','journal','watchlist','favorites','settings','disclaimer'];
+
+function navigate(route) {
+  if (!route || !VALID_ROUTES.includes(route)) route = 'home';
+  currentRoute = route;
+  if (window.location.hash !== '#/' + route) window.location.hash = '#/' + route;
+  render();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+  updateActiveNav(route);
+  addRecent(route);
+  $$('.bottom-nav-item').forEach(el => el.classList.toggle('active', el.dataset.route === route));
+  if (route === 'market' || route === 'tools') {
+    setTimeout(() => {
+      if (document.getElementById('live-chart') && !ChartEngine.canvas) {
+        ChartEngine.init('live-chart');
+      } else if (document.getElementById('live-chart') && ChartEngine.canvas !== document.getElementById('live-chart')) {
+        ChartEngine.init('live-chart');
+      }
+    }, 50);
+  }
+}
+function updateActiveNav(route) {
+  $$('.nav-link').forEach(el => el.classList.toggle('active', el.dataset.route === route));
+}
+function addRecent(route) {
+  if (!route || route === 'home') return;
+  State.recent = [route, ...State.recent.filter(r => r !== route)].slice(0, 6);
+  save('recent');
+}
+function handleHash() {
+  const hash = window.location.hash.replace('#/', '') || 'home';
+  const route = VALID_ROUTES.includes(hash) ? hash : 'home';
+  currentRoute = route;
+  render();
+  updateActiveNav(route);
+  $$('.bottom-nav-item').forEach(el => el.classList.toggle('active', el.dataset.route === route));
+  if (route === 'market' || route === 'tools') {
+    setTimeout(() => ChartEngine.init('live-chart'), 60);
+  }
+}
+window.addEventListener('hashchange', handleHash);
+
+/* ================= RENDER ================= */
+function render() {
+  const app = document.getElementById('app');
+  if (!app) return;
+  let html = '';
+  switch (currentRoute) {
+    case 'home': html = renderHome(); break;
+    case 'dashboard': html = renderDashboard(); break;
+    case 'education': html = renderEducation(); break;
+    case 'tools': html = renderTools(); break;
+    case 'market': html = renderMarket(); break;
+    case 'strategies': html = renderStrategies(); break;
+    case 'risk': html = renderRisk(); break;
+    case 'psychology': html = renderPsychology(); break;
+    case 'dictionary': html = renderDictionary(); break;
+    case 'software': html = renderSoftware(); break;
+    case 'resources': html = renderResources(); break;
+    case 'about': html = renderAbout(); break;
+    case 'journal': html = renderJournal(); break;
+    case 'watchlist': html = renderWatchlist(); break;
+    case 'favorites': html = renderFavorites(); break;
+    case 'settings': html = renderSettings(); break;
+    case 'disclaimer': html = renderDisclaimer(); break;
+    default: html = renderHome();
+  }
+  app.innerHTML = '<div class="page">' + html + '</div>';
+  bindDynamic();
+  initReveal();
+  initCounters();
+  updateHeroCards();
+}
+
+/* ================= PAGE RENDERERS ================= */
+function renderHome() {
+  return `
+    <section class="hero">
+      <div>
+        <span class="hero-badge"><span class="dot"></span> پلتفرم حرفه‌ای ترید و تحلیل بازار</span>
+        <h1>
+          بازارهای مالی را <span class="gold">حرفه‌ای</span> معامله کن<br>
+          <span class="type-line"><span id="typewriter"></span><span class="cursor"></span></span>
+        </h1>
+        <p>آموزش ساختارمند، ابزارهای دقیق، چارت زنده، ژورنال معاملاتی و تحلیل بازار؛ همه در یک پلتفرم یکپارچه برای معامله‌گران جدی.</p>
+        <div class="hero-actions">
+          <button class="btn btn-primary" onclick="navigate('education')">
+            <i class="fa-solid fa-rocket"></i> شروع یادگیری
+          </button>
+          <button class="btn btn-ghost" onclick="navigate('tools')">
+            <i class="fa-solid fa-chart-line"></i> پنل حرفه‌ای
+          </button>
+          <button class="btn btn-outline" onclick="navigate('market')">
+            <i class="fa-solid fa-globe"></i> بازار زنده
+          </button>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-card hero-card-small-1" data-symbol="ETHUSDT">
+          <div class="card-head">
+            <div class="card-symbol">
+              <div class="ic" style="color:#8a92b2"><i class="fa-brands fa-ethereum"></i></div>
+              <span>ETHUSDT</span>
+            </div>
+            <span class="card-live">زنده</span>
+          </div>
+          <div class="small-price" data-price="ETHUSDT">—</div>
+          <canvas class="mini-chart" data-mini="ETHUSDT"></canvas>
+        </div>
+        <div class="hero-card hero-card-main" data-symbol="BTCUSDT">
+          <div class="card-head">
+            <div class="card-symbol">
+              <div class="ic" style="color:#f7931a"><i class="fa-brands fa-bitcoin"></i></div>
+              <span>BTCUSDT</span>
+            </div>
+            <span class="card-live">زنده</span>
+          </div>
+          <div class="card-price" data-price="BTCUSDT">—</div>
+          <div class="card-change" data-change="BTCUSDT">—</div>
+          <canvas class="mini-chart" data-mini="BTCUSDT" style="height:80px"></canvas>
+        </div>
+        <div class="hero-card hero-card-small-2" data-symbol="XAUUSD">
+          <div class="card-head">
+            <div class="card-symbol">
+              <div class="ic" style="color:#d4a24c"><i class="fa-solid fa-coins"></i></div>
+              <span>XAUUSD</span>
+            </div>
+            <span class="card-live">زنده</span>
+          </div>
+          <div class="small-price" data-price="XAUUSD">—</div>
+          <canvas class="mini-chart" data-mini="XAUUSD"></canvas>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="stats">
+        <div class="stat">
+          <span class="num" data-count="12400">0</span>
+          <div class="label">معامله‌گر فعال</div>
+        </div>
+        <div class="stat">
+          <span class="num" data-count="320">0</span>
+          <div class="label">ساعت آموزش</div>
+        </div>
+        <div class="stat">
+          <span class="num" data-count="87" data-suffix="٪">0</span>
+          <div class="label">رضایت کاربران</div>
+        </div>
+        <div class="stat">
+          <span class="num" data-count="24">0</span>
+          <div class="label">پشتیبانی ساعته</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <h2 class="section-title"><span class="gold">چرا TradeMitek؟</span></h2>
+        <p class="section-sub">هر آنچه برای تبدیل شدن به یک تریدر حرفه‌ای نیاز داری، در یک اکوسیستم یکپارچه.</p>
+      </div>
+      <div class="grid grid-3">
+        ${[
+          { i:'fa-chart-line', t:'چارت زنده بازار', d:'نمودار کندل‌استیک با به‌روزرسانی لحظه‌ای و ابزارهای تحلیل.' },
+          { i:'fa-shield-halved', t:'مدیریت ریسک', d:'محاسبه‌گرهای دقیق برای حفظ سرمایه و کنترل زیان.' },
+          { i:'fa-pen-to-square', t:'ژورنال معاملات', d:'ثبت، تحلیل و بهبود عملکرد با آمار خودکار.' },
+          { i:'fa-graduation-cap', t:'آموزش ساختارمند', d:'دوره‌های گام‌به‌گام از مبتدی تا پیشرفته.' },
+          { i:'fa-chess', t:'کتابخانه استراتژی', d:'استراتژی‌های رایج بازار با جزئیات کامل.' },
+          { i:'fa-book', t:'واژه‌نامه حرفه‌ای', d:'${GLOSSARY.length} اصطلاح کلیدی ترید با توضیح.' }
+        ].map(x => `
+          <div class="feature-card">
+            <div class="feature-icon"><i class="fa-solid ${x.i}"></i></div>
+            <h3>${x.t}</h3>
+            <p>${x.d}</p>
+          </div>
+        `).join('')}
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="flex-between mb-2">
+        <div>
+          <h2 class="section-title"><i class="fa-solid fa-chart-simple text-gold"></i> نمای بازار</h2>
+          <p class="section-sub" style="margin-bottom:0">قیمت لحظه‌ای دارایی‌های کلیدی بازارهای جهانی</p>
+        </div>
+        <button class="btn btn-sm btn-ghost" onclick="navigate('market')">مشاهده همه <i class="fa-solid fa-arrow-left"></i></button>
+      </div>
+      <div class="grid grid-4" id="homeMarket"></div>
+    </section>
+
+    <section class="section reveal">
+      <div class="section-head">
+        <h2 class="section-title"><span class="gold">مسیر یادگیری</span></h2>
+        <p class="section-sub">۱۰ مرحله ساختارمند از صفر تا حرفه‌ای.</p>
+      </div>
+      <div class="roadmap">
+        ${ROADMAP.slice(0, 5).map(s => `
+          <div class="roadmap-step ${State.progress[s.n] ? 'done' : ''}" data-roadmap="${s.n}" data-step="${s.n}">
+            <div class="flex-between">
+              <div>
+                <strong>${s.title}</strong>
+                <div class="text-xs text-muted mt-1">${s.desc}</div>
+              </div>
+              <span class="tag ${State.progress[s.n] ? 'tag-emerald' : 'tag-gold'}">
+                ${State.progress[s.n] ? '<i class="fa-solid fa-check"></i> تکمیل' : 'شروع'}
+              </span>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="text-center mt-3">
+        <button class="btn btn-ghost" onclick="navigate('education')">مشاهده کل مسیر <i class="fa-solid fa-arrow-left"></i></button>
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="flex-between mb-2">
+        <div>
+          <h2 class="section-title"><i class="fa-solid fa-book text-gold"></i> آموزش‌های منتخب</h2>
+          <p class="section-sub" style="margin-bottom:0">دوره‌های پرطرفدار برای شروع و پیشرفت</p>
+        </div>
+        <button class="btn btn-sm btn-ghost" onclick="navigate('education')">همه آموزش‌ها <i class="fa-solid fa-arrow-left"></i></button>
+      </div>
+      <div class="grid grid-3">
+        ${ARTICLES.slice(0, 6).map(a => articleCard(a)).join('')}
+      </div>
+    </section>
+
+    <section class="section reveal">
+      <div class="card" style="background: linear-gradient(135deg, rgba(212,162,76,0.08), rgba(77,166,255,0.04)); border-color: var(--glass-border-2);">
+        <div class="flex-between">
+          <div>
+            <h2 style="font-size:1.5rem;font-weight:800;margin-bottom:6px;">
+              <span class="gold">همین حالا شروع کن</span>
+            </h2>
+            <p class="text-muted text-sm">بدون هزینه، بدون ریسک. ژورنال معاملات، چارت زنده و ابزارهای حرفه‌ای در انتظار توست.</p>
+          </div>
+          <div class="flex-center" style="gap:10px;flex-wrap:wrap">
+            <button class="btn btn-primary" onclick="navigate('journal')"><i class="fa-solid fa-pen-to-square"></i> ورود به ژورنال</button>
+            <button class="btn btn-ghost" onclick="navigate('tools')"><i class="fa-solid fa-calculator"></i> ابزارها</button>
+          </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+function articleCard(a) {
+  const levelFa = a.level === 'beginner' ? 'مبتدی' : a.level === 'intermediate' ? 'متوسط' : 'پیشرفته';
+  const levelCls = a.level === 'beginner' ? 'level-beginner' : a.level === 'intermediate' ? 'level-intermediate' : 'level-advanced';
+  return `
+    <div class="article-card" data-article="${a.id}">
+      <button class="fav-btn ${isFav(a.id) ? 'active' : ''}" data-action="toggle-fav" data-id="${a.id}" data-type="article" aria-label="علاقه‌مندی">
+        <i class="fa-solid fa-star"></i>
+      </button>
+      <span class="tag ${levelCls}">${levelFa}</span>
+      <h4>${a.title}</h4>
+      <p>${a.desc}</p>
+      <div class="article-meta">
+        <span class="tag tag-gold">${a.cat}</span>
+        <span class="text-xs text-muted"><i class="fa-solid fa-clock"></i> ${a.read} دقیقه</span>
+      </div>
+    </div>
+  `;
+}
+
+function renderDashboard() {
+  const totalXp = State.xp;
+  const level = getLevel(totalXp);
+  const lessonsDone = Object.keys(State.progress).filter(k => k.startsWith('done_')).length;
+  const roadmapDone = ROADMAP.filter(r => State.progress[r.n]).length;
+  const journalCount = State.journal.length;
+  const notesCount = State.notes.length;
+  const favCount = State.favorites.length;
+  const checklistDone = Object.values(State.checklist).filter(Boolean).length;
+
+  return `
+    <div class="flex-between mb-3">
+      <div>
+        <h1 class="section-title"><i class="fa-solid fa-table-columns text-gold"></i> داشبورد شخصی</h1>
+        <p class="section-sub" style="margin-bottom:0">وضعیت یادگیری، عملکرد و فعالیت‌های شما</p>
+      </div>
+      <button class="btn btn-sm btn-ghost" onclick="navigate('settings')"><i class="fa-solid fa-gear"></i> تنظیمات</button>
+    </div>
+
+    <div class="card mb-3">
+      <div class="flex-between mb-3">
+        <div class="flex-center">
+          <div style="width:54px;height:54px;border-radius:16px;background:var(--grad-gold);display:grid;place-items:center;font-size:1.5rem;color:#1a1206;box-shadow:var(--shadow-gold)">
+            <i class="fa-solid fa-award"></i>
+          </div>
+          <div>
+            <div style="font-weight:800;font-size:1.1rem">${level.name}</div>
+            <div class="text-xs text-muted">${fmtFa(totalXp)} XP — سطح ${level.num}</div>
+          </div>
+        </div>
+        <span class="tag tag-gold">سطح ${level.num} از ۵</span>
+      </div>
+      <div class="xp-wrap">
+        <span class="xp-level">${fmtFa(totalXp)}</span>
+        <div class="xp-bar"><div class="xp-fill" style="width:${level.progress}%"></div></div>
+        <span class="xp-text">${level.next ? fmtFa(level.next - totalXp) + ' XP تا سطح بعد' : 'حداکثر سطح'}</span>
+      </div>
+    </div>
+
+    <div class="grid grid-4 mb-3">
+      <div class="stat-card">
+        <div class="stat-value">${fmtFa(lessonsDone)}</div>
+        <div class="stat-label">درس تکمیل‌شده</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${fmtFa(journalCount)}</div>
+        <div class="stat-label">معامله ثبت‌شده</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${fmtFa(notesCount)}</div>
+        <div class="stat-label">یادداشت</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">${fmtFa(favCount)}</div>
+        <div class="stat-label">علاقه‌مندی</div>
+      </div>
+    </div>
+
+    <div class="grid grid-2 mb-3">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i class="fa-solid fa-route"></i> وضعیت مسیر یادگیری</div>
+          <button class="btn btn-sm btn-ghost" onclick="navigate('education')">ادامه</button>
+        </div>
+        <div class="progress-bar mb-2"><div class="progress-fill" style="width:${(roadmapDone / ROADMAP.length) * 100}%"></div></div>
+        <div class="text-sm text-muted">${fmtFa(roadmapDone)} از ${fmtFa(ROADMAP.length)} مرحله تکمیل شده</div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i class="fa-solid fa-trophy"></i> دستاوردها</div>
+          <span class="tag tag-gold">${fmtFa(Object.keys(State.achievements).filter(k => State.achievements[k]).length)} / ${fmtFa(ACHIEVEMENTS.length)}</span>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(3,1fr);gap:10px">
+          ${ACHIEVEMENTS.map(a => `
+            <div class="achievement ${State.achievements[a.id] ? 'unlocked' : ''}" title="${a.desc}">
+              <div class="icon"><i class="fa-solid ${a.icon}"></i></div>
+              <div class="name">${a.name}</div>
+            </div>
+          `).join('')}
+        </div>
+      </div>
+    </div>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i class="fa-solid fa-note-sticky"></i> یادداشت‌های اخیر</div>
+          <button class="btn btn-sm btn-ghost" onclick="openNoteModal()"><i class="fa-solid fa-plus"></i> جدید</button>
+        </div>
+        ${State.notes.length === 0
+          ? '<div class="empty-state"><div class="icon"><i class="fa-solid fa-note-sticky"></i></div><h3>هنوز یادداشتی نداری</h3><p>ایده‌ها و تحلیل‌هایت را ثبت کن.</p></div>'
+          : State.notes.slice(0, 4).map(n => `
+            <div class="flex-between" style="padding:10px 0;border-bottom:1px solid var(--glass-border)">
+              <div>
+                <strong>${escapeHtml(n.title)}</strong>
+                <div class="text-xs text-muted">${n.date}</div>
+              </div>
+              <button class="journal-del" onclick="deleteNote('${n.id}')" title="حذف"><i class="fa-solid fa-trash"></i></button>
+            </div>
+          `).join('')}
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i class="fa-solid fa-clock-rotate-left"></i> فعالیت‌های اخیر</div>
+        </div>
+        ${State.recent.length === 0
+          ? '<div class="empty-state"><div class="icon"><i class="fa-solid fa-clock"></i></div><h3>فعالیتی ثبت نشده</h3><p>با مرور صفحات، اینجا نمایش داده می‌شود.</p></div>'
+          : State.recent.slice(0, 6).map(r => `
+            <div style="padding:8px 0;border-bottom:1px solid var(--glass-border)">
+              <span class="tag tag-sky"><i class="fa-solid fa-arrow-left"></i> ${routeName(r)}</span>
+            </div>
+          `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderEducation() {
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-graduation-cap text-gold"></i> مرکز آموزش</h1>
+    <p class="section-sub">آموزش‌های گام‌به‌گام از مبتدی تا پیشرفته در ${fmtFa(ARTICLES.length)} درس</p>
+
+    <div class="card mb-3">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-route"></i> مسیر یادگیری</div>
+        <span class="tag tag-gold">${fmtFa(Object.keys(State.progress).filter(k => ROADMAP.some(r => r.n === k)).length)} / ${fmtFa(ROADMAP.length)}</span>
+      </div>
+      <div class="roadmap">
+        ${ROADMAP.map(s => `
+          <div class="roadmap-step ${State.progress[s.n] ? 'done' : ''}" data-roadmap="${s.n}" data-step="${s.n}">
+            <div class="flex-between">
+              <div>
+                <strong>${s.title}</strong>
+                <div class="text-xs text-muted mt-1">${s.desc}</div>
+              </div>
+              <span class="tag ${State.progress[s.n] ? 'tag-emerald' : ''}">
+                ${State.progress[s.n] ? '<i class="fa-solid fa-check"></i>' : '<i class="fa-regular fa-circle"></i>'}
+              </span>
+            </div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+
+    <h2 class="section-title" style="font-size:1.3rem"><i class="fa-solid fa-book-open text-gold"></i> همه آموزش‌ها</h2>
+    <div class="grid grid-3 mt-2">
+      ${ARTICLES.map(a => articleCard(a)).join('')}
+    </div>
+  `;
+}
+
+function renderTools() {
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-calculator text-gold"></i> مرکز ابزارهای حرفه‌ای</h1>
+    <p class="section-sub">چارت زنده، محاسبه‌گرها و ژورنال معاملات در یک پنل یکپارچه</p>
+
+    <div class="grid grid-2 mb-3">
+      <div class="chart-panel" style="grid-column: span 2;">
+        <div class="chart-toolbar">
+          <select id="chart-symbol" onchange="changeChartSymbol(this.value)">
+            ${Object.keys(MarketEngine.live).map(s => `<option value="${s}" ${s === ChartEngine.symbol ? 'selected' : ''}>${s}</option>`).join('')}
+          </select>
+          <select id="chart-tf" onchange="changeChartTf(this.value)">
+            <option value="M1">M1</option>
+            <option value="M5">M5</option>
+            <option value="M15">M15</option>
+            <option value="H1">H1</option>
+            <option value="H4">H4</option>
+            <option value="D1">D1</option>
+          </select>
+          <button id="chart-pause" onclick="toggleChartPause()"><i class="fa-solid fa-pause"></i> توقف</button>
+          <div style="margin-right:auto;display:flex;gap:8px;align-items:center">
+            <span class="card-live">زنده</span>
+          </div>
+        </div>
+        <div class="chart-canvas-wrap">
+          <canvas id="live-chart"></canvas>
+        </div>
+        <div class="chart-stats">
+          <div>
+            <div class="chart-price" id="chart-price">—</div>
+            <div class="chart-symbol-name" id="chart-symbol-name">BTCUSDT • M1</div>
+          </div>
+          <div id="chart-change" class="chart-change up">—</div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-title" style="font-size:1.3rem"><i class="fa-solid fa-toolbox text-gold"></i> محاسبه‌گرها</h2>
+    <p class="section-sub">ابزارهای دقیق برای مدیریت ریسک و برنامه‌ریزی معاملات</p>
+    <div class="grid grid-2">
+      ${TOOLS_LIST.map(t => `
+        <div class="card card-clickable" data-tool="${t.id}">
+          <div class="flex-center">
+            <div class="feature-icon" style="margin:0 0 0 14px;width:48px;height:48px;font-size:1.2rem">
+              <i class="fa-solid ${t.icon}"></i>
+            </div>
+            <div>
+              <div style="font-weight:700">${t.name}</div>
+              <div class="text-xs text-muted">${t.desc}</div>
+            </div>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="warning-box mt-4">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <div>تمام محاسبات صرفاً ابزار آموزشی‌اند. نتیجه هر معامله واقعی به شرایط بازار بستگی دارد و هیچ نتیجه‌ای تضمین‌شده نیست.</div>
+    </div>
+  `;
+}
+
+function renderMarket() {
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-globe text-gold"></i> بازار زنده</h1>
+    <p class="section-sub">قیمت لحظه‌ای دارایی‌های کلیدی بازارهای جهانی</p>
+
+    <div class="grid grid-4" id="marketGrid"></div>
+
+    <div class="card mt-4">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-clock"></i> ساعت سشن‌های بازار</div>
+      </div>
+      <div class="session-clock" id="sessionClock"></div>
+    </div>
+
+    <div class="card mt-3">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-calendar-days"></i> تقویم اقتصادی</div>
+      </div>
+      <div class="table-wrap mt-2">
+        <table>
+          <thead>
+            <tr><th>رویداد</th><th>ارز</th><th>اهمیت</th><th>وضعیت</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>نرخ بهره فدرال رزرو</td><td>USD</td><td><span class="tag tag-rose">بالا</span></td><td><span class="tag tag-gold">در انتظار</span></td></tr>
+            <tr><td>شاخص CPI</td><td>USD</td><td><span class="tag tag-rose">بالا</span></td><td><span class="tag tag-gold">در انتظار</span></td></tr>
+            <tr><td>گزارش NFP</td><td>USD</td><td><span class="tag tag-rose">بالا</span></td><td><span class="tag tag-gold">در انتظار</span></td></tr>
+            <tr><td>GDP منطقه یورو</td><td>EUR</td><td><span class="tag tag-gold">متوسط</span></td><td><span class="tag tag-gold">در انتظار</span></td></tr>
+            <tr><td>نرخ بیکاری بریتانیا</td><td>GBP</td><td><span class="tag tag-gold">متوسط</span></td><td><span class="tag tag-gold">در انتظار</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  `;
+}
+
+function renderStrategies() {
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-chess text-gold"></i> کتابخانه استراتژی‌ها</h1>
+    <p class="section-sub">چارچوب‌های حرفه‌ای معاملاتی برای بازارهای مختلف</p>
+    <div class="grid grid-2">
+      ${STRATEGIES.map(s => `
+        <div class="card card-clickable" data-strategy="${s.id}">
+          <div class="flex-between mb-2">
+            <div style="font-weight:700;font-size:1rem">${s.name}</div>
+            <button class="fav-btn ${isFav(s.id) ? 'active' : ''}" data-action="toggle-fav" data-id="${s.id}" data-type="strategy" style="position:static" aria-label="علاقه‌مندی">
+              <i class="fa-solid fa-star"></i>
+            </button>
+          </div>
+          <div class="flex-center mb-2" style="flex-wrap:wrap;gap:6px">
+            <span class="tag tag-gold">${s.cat}</span>
+            <span class="tag ${s.level === 'beginner' ? 'level-beginner' : s.level === 'intermediate' ? 'level-intermediate' : 'level-advanced'}">
+              ${s.level === 'beginner' ? 'مبتدی' : s.level === 'intermediate' ? 'متوسط' : 'پیشرفته'}
+            </span>
+          </div>
+          <p class="text-sm text-muted">${s.concept}</p>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderRisk() {
+  const items = [
+    { t:'اندازه موقعیت (Position Sizing)', d:'تعیین حجم بر اساس درصد ریسک و فاصله حد ضرر.' },
+    { t:'حد ضرر (Stop Loss)', d:'ابزار اصلی محدود کردن زیان در هر معامله.' },
+    { t:'حد سود (Take Profit)', d:'تعیین هدف سود بر اساس نسبت ریسک به ریوارد.' },
+    { t:'ریسک هر معامله', d:'معمولاً ۱–۲٪ از سرمایه در هر معامله.' },
+    { t:'حداکثر افت سرمایه', d:'بیشترین کاهش از اوج سرمایه که باید کنترل شود.' },
+    { t:'نسبت ریسک به ریوارد', d:'هدف‌گذاری حداقل ۱:۲ برای معاملات.' },
+    { t:'توزیع ریسک پرتفوی', d:'پخش ریسک بین دارایی‌های غیرهمبسته.' },
+    { t:'همبستگی دارایی‌ها', d:'دارایی‌های همبسته ریسک را چند برابر می‌کنند.' },
+    { t:'اجتناب از معامله بیش از حد', d:'پرهیز از ورودهای احساسی و مکرر.' },
+    { t:'ریسک اهرم', d:'افزایش اهرم = افزایش ریسک. هوشمندانه استفاده کن.' }
+  ];
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-shield-halved text-gold"></i> مدیریت ریسک</h1>
+    <p class="section-sub">مهم‌ترین مهارت در ترید حرفه‌ای</p>
+
+    <div class="danger-box mb-3">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <div><strong>اهرم می‌تواند زیان را نیز بزرگ‌تر کند.</strong> هیچ استراتژی سود قطعی را تضمین نمی‌کند.</div>
+    </div>
+
+    <div class="grid grid-2 mb-3">
+      ${items.map(x => `
+        <div class="card">
+          <div style="font-weight:700">${x.t}</div>
+          <div class="text-sm text-muted mt-1">${x.d}</div>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-calculator"></i> محاسبه‌گر سریع ریسک</div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label class="form-label">سرمایه (دلار)</label><input class="form-input" id="riskCapital" type="number" value="10000" dir="ltr"></div>
+        <div class="form-group"><label class="form-label">درصد ریسک</label><input class="form-input" id="riskPercent" type="number" value="1" dir="ltr"></div>
+        <div class="form-group"><label class="form-label">فاصله حد ضرر</label><input class="form-input" id="riskSL" type="number" value="50" dir="ltr"></div>
+      </div>
+      <button class="btn btn-primary" onclick="quickRiskCalc()"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+      <div id="riskResult" class="calc-result" style="display:none"></div>
+    </div>
+  `;
+}
+
+function renderPsychology() {
+  const items = ['FOMO (ترس از جا ماندن)','انتقام‌گیری از بازار','ترس از ضرر','طمع','اعتماد به نفس بیش از حد','بی‌صبری','بیزاری از ضرر','نظم و انضباط','طرح معاملاتی','ژورنال احساسات'];
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-brain text-gold"></i> روانشناسی ترید</h1>
+    <p class="section-sub">کنترل احساسات و تصمیم‌گیری منطقی</p>
+
+    <div class="grid grid-2 mb-3">
+      ${items.map(t => `
+        <div class="card">
+          <div style="font-weight:700">${t}</div>
+          <div class="text-xs text-muted mt-1">مفهوم کلیدی روانشناسی معاملات</div>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-list-check"></i> چک‌لیست قبل از معامله</div>
+        <span class="tag tag-gold">تعاملی</span>
+      </div>
+      ${[
+        'آیا دلیل مشخصی برای معامله دارم؟',
+        'حد ضرر مشخص است؟',
+        'میزان ریسک مشخص است؟',
+        'طبق برنامه عمل می‌کنم؟',
+        'تصمیمم احساسی نیست؟'
+      ].map((q, i) => `
+        <div class="check-item ${State.checklist['psy_' + i] ? 'checked' : ''}" data-checklist="psy_${i}">
+          <div class="check-box"><i class="fa-solid fa-check"></i></div>
+          <div class="check-label">${q}</div>
+        </div>
+      `).join('')}
+      <div class="text-xs text-muted mt-2">وضعیت چک‌لیست به صورت خودکار ذخیره می‌شود.</div>
+    </div>
+  `;
+}
+
+function renderDictionary() {
+  return `
+    <div class="flex-between mb-3">
+      <div>
+        <h1 class="section-title"><i class="fa-solid fa-book text-gold"></i> واژه‌نامه ترید</h1>
+        <p class="section-sub" style="margin-bottom:0">${fmtFa(GLOSSARY.length)} اصطلاح کلیدی با توضیح فارسی</p>
+      </div>
+    </div>
+    <div class="form-group mb-3">
+      <input class="form-input" id="dictSearch" placeholder="جستجو در اصطلاحات..." oninput="filterDictionary(this.value)">
+    </div>
+    <div class="grid grid-2" id="dictGrid">
+      ${GLOSSARY.map((g, i) => `
+        <div class="card card-clickable" data-glossary="${i}">
+          <div class="flex-between">
+            <div style="font-weight:700">${g.fa}</div>
+            <span class="tag tag-sky" style="direction:ltr">${g.en}</span>
+          </div>
+          <p class="text-sm text-muted mt-2">${g.def}</p>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderSoftware() {
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-laptop-code text-gold"></i> نرم‌افزارهای معاملاتی</h1>
+    <p class="section-sub">معرفی پلتفرم‌ها و ابزارهای تحلیل حرفه‌ای</p>
+    <div class="grid grid-2">
+      ${SOFTWARE.map(s => `
+        <div class="card">
+          <div class="flex-center mb-2">
+            <div class="feature-icon" style="margin:0 0 0 14px;width:48px;height:48px;font-size:1.2rem">
+              <i class="fa-solid ${s.icon}"></i>
+            </div>
+            <div>
+              <div style="font-weight:700">${s.name}</div>
+              <div class="text-xs text-muted">${s.suitable}</div>
+            </div>
+          </div>
+          <p class="text-sm text-muted mb-2">${s.desc}</p>
+          <div class="flex-center" style="flex-wrap:wrap;gap:6px">
+            <span class="tag tag-gold">${s.platform}</span>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+
+    <div class="card mt-4">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-mobile-screen"></i> معامله در موبایل و دسکتاپ</div>
+      </div>
+      <div class="grid grid-2">
+        ${[
+          { t:'اندروید', d:'نصب اپلیکیشن رسمی، فعال‌سازی اعلان‌ها و تنظیمات امنیتی' },
+          { t:'آیفون', d:'نصب از App Store، فعال‌سازی Face ID و بررسی مجوزها' },
+          { t:'ویندوز', d:'نصب نسخه دسکتاپ، تنظیم چیدمان نمودار، امنیت حساب' },
+          { t:'مک', d:'نصب نسخه macOS، همگام‌سازی با موبایل، پشتیبان‌گیری' }
+        ].map(x => `
+          <div class="card">
+            <div style="font-weight:700">${x.t}</div>
+            <div class="text-xs text-muted mt-1">${x.d}</div>
+          </div>
+        `).join('')}
+      </div>
+    </div>
+  `;
+}
+
+function renderResources() {
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-folder-open text-gold"></i> منابع</h1>
+    <p class="section-sub">دسته‌بندی منابع آموزشی و کاربردی</p>
+    <div class="grid grid-3">
+      ${[
+        { t:'آموزش', i:'fa-book' },
+        { t:'ابزار', i:'fa-calculator' },
+        { t:'نمودار', i:'fa-chart-line' },
+        { t:'تقویم اقتصادی', i:'fa-calendar-days' },
+        { t:'داده بازار', i:'fa-chart-pie' },
+        { t:'مدیریت ریسک', i:'fa-shield-halved' },
+        { t:'روانشناسی', i:'fa-brain' }
+      ].map(x => `
+        <div class="card text-center card-clickable">
+          <div class="feature-icon" style="margin:0 auto 12px"><i class="fa-solid ${x.i}"></i></div>
+          <div style="font-weight:700">${x.t}</div>
+          <div class="text-xs text-muted mt-1">منبع معتبر جهانی</div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+function renderAbout() {
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-circle-info text-gold"></i> درباره TradeMitek</h1>
+    <p class="section-sub">پلتفرم حرفه‌ای آموزش، تحلیل و ابزار ترید</p>
+
+    <div class="grid grid-2">
+      <div class="card">
+        <div style="width:70px;height:70px;border-radius:20px;background:var(--grad-gold);display:grid;place-items:center;font-size:1.8rem;color:#1a1206;font-weight:900;margin-bottom:16px;box-shadow:var(--shadow-gold)">TM</div>
+        <div style="font-size:1.4rem;font-weight:800;margin-bottom:6px">TradeMitek</div>
+        <p class="text-sm text-muted mb-3">پلتفرم یکپارچه برای آموزش ساختارمند، تحلیل بازار، مدیریت ریسک و ژورنال معاملاتی. ساخته شده برای معامله‌گرانی که به دنبال یادگیری حرفه‌ای و ابزارهای دقیق هستند.</p>
+        <div class="grid grid-2" style="grid-template-columns:1fr 1fr">
+          <div class="stat-card"><div class="stat-value">${fmtFa(ARTICLES.length)}</div><div class="stat-label">درس آموزشی</div></div>
+          <div class="stat-card"><div class="stat-value">${fmtFa(TOOLS_LIST.length)}</div><div class="stat-label">ابزار حرفه‌ای</div></div>
+          <div class="stat-card"><div class="stat-value">${fmtFa(STRATEGIES.length)}</div><div class="stat-label">استراتژی</div></div>
+          <div class="stat-card"><div class="stat-value">${fmtFa(GLOSSARY.length)}</div><div class="stat-label">اصطلاح کلیدی</div></div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          <div class="card-title"><i class="fa-solid fa-address-card"></i> ارتباط با ما</div>
+        </div>
+
+        <div style="padding:16px;background:rgba(5,8,15,0.4);border-radius:12px;border:1px solid var(--glass-border);margin-bottom:14px">
+          <div class="text-xs text-muted mb-1">سازنده و توسعه‌دهنده</div>
+          <div style="font-weight:700;font-size:1.05rem;margin-bottom:10px">امیرمحمد خدارضایی</div>
+          <div class="flex-center" style="gap:10px;flex-wrap:wrap">
+            <a href="tel:09224507598" class="btn btn-sm btn-ghost" style="direction:ltr">
+              <i class="fa-solid fa-phone"></i> ۰۹۲۲۴۵۰۷۵۹۸
+            </a>
+            <a href="mailto:amirglooster@gmail.com" class="btn btn-sm btn-ghost" style="direction:ltr">
+              <i class="fa-solid fa-envelope"></i> amirglooster@gmail.com
+            </a>
+          </div>
+        </div>
+
+        <div style="padding:16px;background:rgba(5,8,15,0.4);border-radius:12px;border:1px solid var(--glass-border)">
+          <div class="text-xs text-muted mb-1">پشتیبان دوم</div>
+          <div style="font-weight:700;font-size:1.05rem;margin-bottom:10px">آرمین علینقی</div>
+          <a href="mailto:arminalinaghi4@gmail.com" class="btn btn-sm btn-ghost" style="direction:ltr">
+            <i class="fa-solid fa-envelope"></i> arminalinaghi4@gmail.com
+          </a>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function renderJournal() {
+  const wins = State.journal.filter(j => j.result === 'سود').length;
+  const losses = State.journal.filter(j => j.result === 'زیان').length;
+  const winRate = State.journal.length ? Math.round((wins / State.journal.length) * 100) : 0;
+  return `
+    <div class="flex-between mb-3">
+      <div>
+        <h1 class="section-title"><i class="fa-solid fa-pen-to-square text-gold"></i> ژورنال معاملات</h1>
+        <p class="section-sub" style="margin-bottom:0">ثبت و تحلیل معاملات — ${fmtFa(State.journal.length)} مورد ثبت شده</p>
+      </div>
+    </div>
+
+    ${State.journal.length > 0 ? `
+      <div class="grid grid-4 mb-3">
+        <div class="stat-card"><div class="stat-value">${fmtFa(State.journal.length)}</div><div class="stat-label">کل معاملات</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--emerald)">${fmtFa(wins)}</div><div class="stat-label">سودده</div></div>
+        <div class="stat-card"><div class="stat-value" style="color:var(--rose)">${fmtFa(losses)}</div><div class="stat-label">زیان‌ده</div></div>
+        <div class="stat-card"><div class="stat-value">${fmtFa(winRate)}٪</div><div class="stat-label">نرخ برد</div></div>
+      </div>
+    ` : ''}
+
+    <div class="card mb-3">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-plus"></i> ثبت معامله جدید</div>
+      </div>
+      <form id="journalForm" onsubmit="event.preventDefault();saveJournal();">
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">تاریخ</label><input class="form-input" id="jDate" placeholder="۱۴۰۴/۰۱/۰۱" required></div>
+          <div class="form-group"><label class="form-label">نماد</label><input class="form-input" id="jAsset" placeholder="BTCUSDT" required></div>
+          <div class="form-group"><label class="form-label">جهت</label>
+            <select class="form-select" id="jDir"><option value="خرید">خرید</option><option value="فروش">فروش</option></select>
+          </div>
+          <div class="form-group"><label class="form-label">نتیجه</label>
+            <select class="form-select" id="jResult"><option value="سود">سود</option><option value="زیان">زیان</option><option value="سر به سر">سر به سر</option></select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group"><label class="form-label">ورود</label><input class="form-input" id="jEntry" dir="ltr"></div>
+          <div class="form-group"><label class="form-label">حد ضرر</label><input class="form-input" id="jSL" dir="ltr"></div>
+          <div class="form-group"><label class="form-label">حد سود</label><input class="form-input" id="jTP" dir="ltr"></div>
+          <div class="form-group"><label class="form-label">سود/زیان ($)</label><input class="form-input" id="jPnl" type="number" dir="ltr"></div>
+        </div>
+        <div class="form-group"><label class="form-label">دلیل ورود</label><textarea class="form-textarea" id="jReason" placeholder="چرا وارد این معامله شدی؟"></textarea></div>
+        <div class="form-group"><label class="form-label">یادداشت</label><textarea class="form-textarea" id="jNote" placeholder="نکات مهم، احساسات و درس‌ها"></textarea></div>
+        <button type="submit" class="btn btn-primary"><i class="fa-solid fa-check"></i> ثبت در ژورنال</button>
+      </form>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-list"></i> معاملات ثبت‌شده</div>
+      </div>
+      ${State.journal.length === 0
+        ? '<div class="empty-state"><div class="icon"><i class="fa-solid fa-pen-to-square"></i></div><h3>هنوز معامله‌ای ثبت نکردی</h3><p>اولین معامله‌ات را ثبت کن تا آمار عملکردت شکل بگیرد.</p></div>'
+        : `<div class="table-wrap"><table><thead><tr><th>تاریخ</th><th>نماد</th><th>جهت</th><th>نتیجه</th><th>سود/زیان</th><th>یادداشت</th><th></th></tr></thead><tbody>
+          ${State.journal.slice(0, 30).map(j => `
+            <tr>
+              <td>${escapeHtml(j.date)}</td>
+              <td><strong>${escapeHtml(j.asset)}</strong></td>
+              <td>${j.dir}</td>
+              <td><span class="tag ${j.result === 'سود' ? 'tag-emerald' : j.result === 'زیان' ? 'tag-rose' : ''}">${j.result}</span></td>
+              <td class="${j.pnl >= 0 ? 'pnl-pos' : 'pnl-neg'}">${j.pnl != null ? (j.pnl >= 0 ? '+' : '') + fmt(j.pnl) + '$' : '—'}</td>
+              <td class="text-xs text-muted">${escapeHtml((j.note || '').slice(0, 40))}</td>
+              <td><button class="journal-del" onclick="deleteJournal('${j.id}')"><i class="fa-solid fa-trash"></i></button></td>
+            </tr>
+          `).join('')}
+        </tbody></table></div>`}
+    </div>
+  `;
+}
+
+function renderWatchlist() {
+  const allSymbols = Object.keys(MarketEngine.live);
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-eye text-gold"></i> واچ‌لیست</h1>
+    <p class="section-sub">دارایی‌های مورد علاقه شما (${fmtFa(State.watchlist.length)} مورد)</p>
+
+    <div class="card mb-3">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-plus"></i> افزودن دارایی</div>
+      </div>
+      <div class="flex-center" style="flex-wrap:wrap;gap:8px">
+        ${allSymbols.map(s => `
+          <button class="tag ${State.watchlist.includes(s) ? 'tag-gold' : ''}" onclick="toggleWatchlist('${s}')" style="cursor:pointer;padding:6px 14px;font-size:0.82rem">
+            ${State.watchlist.includes(s) ? '<i class="fa-solid fa-check"></i> ' : ''}${s}
+          </button>
+        `).join('')}
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-list"></i> واچ‌لیست شما</div>
+      </div>
+      ${State.watchlist.length === 0
+        ? '<div class="empty-state"><div class="icon"><i class="fa-solid fa-eye"></i></div><h3>واچ‌لیست خالی است</h3><p>دارایی‌های مورد علاقه خود را اضافه کنید.</p></div>'
+        : `<div class="grid grid-3">${State.watchlist.map(s => {
+            const m = MarketEngine.live[s];
+            if (!m) return '';
+            const change = MarketEngine.getChange(s);
+            const up = change >= 0;
+            const dec = m.price > 100 ? 2 : m.price > 10 ? 3 : 5;
+            return `
+              <div class="market-card">
+                <div class="market-top">
+                  <div class="market-symbol">
+                    <div class="market-icon" style="color:${m.color}"><i class="fa-brands ${m.icon}"></i></div>
+                    ${s}
+                  </div>
+                  <button class="journal-del" onclick="toggleWatchlist('${s}')" title="حذف"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="market-price">${fmt(m.price, dec)}</div>
+                <div class="market-change ${up ? 'up' : 'down'}">
+                  <i class="fa-solid fa-arrow-trend-${up ? 'up' : 'down'}"></i>
+                  ${(up ? '+' : '') + change.toFixed(2)}%
+                </div>
+              </div>
+            `;
+          }).join('')}</div>`}
+    </div>
+  `;
+}
+
+function renderFavorites() {
+  const favArticles = ARTICLES.filter(a => State.favorites.includes(a.id));
+  const favStrategies = STRATEGIES.filter(s => State.favorites.includes(s.id));
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-star text-gold"></i> علاقه‌مندی‌ها</h1>
+    <p class="section-sub">${fmtFa(State.favorites.length)} مورد ذخیره‌شده</p>
+    ${State.favorites.length === 0
+      ? '<div class="empty-state"><div class="icon"><i class="fa-solid fa-star"></i></div><h3>هنوز موردی ذخیره نکردی</h3><p>با کلیک روی ستاره، آموزش‌ها و استراتژی‌ها را ذخیره کن.</p></div>'
+      : `
+        ${favArticles.length ? `<h2 class="section-title" style="font-size:1.15rem"><i class="fa-solid fa-book text-gold"></i> آموزش‌ها</h2><div class="grid grid-3 mb-3">${favArticles.map(a => articleCard(a)).join('')}</div>` : ''}
+        ${favStrategies.length ? `<h2 class="section-title" style="font-size:1.15rem"><i class="fa-solid fa-chess text-gold"></i> استراتژی‌ها</h2><div class="grid grid-2">${favStrategies.map(s => `
+          <div class="card card-clickable" data-strategy="${s.id}">
+            <div style="font-weight:700">${s.name}</div>
+            <p class="text-sm text-muted mt-1">${s.concept}</p>
+          </div>
+        `).join('')}</div>` : ''}
+      `}
+  `;
+}
+
+function renderSettings() {
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-gear text-gold"></i> تنظیمات</h1>
+    <p class="section-sub">مدیریت داده‌ها و تنظیمات شخصی</p>
+
+    <div class="card mb-3">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-palette"></i> ظاهر</div>
+      </div>
+      <div class="flex-between">
+        <div>
+          <div style="font-weight:600">حالت نمایش</div>
+          <div class="text-xs text-muted">تغییر بین تم تاریک و روشن</div>
+        </div>
+        <button class="btn btn-ghost" onclick="toggleTheme()">
+          <i class="fa-solid fa-${State.theme === 'dark' ? 'sun' : 'moon'}"></i>
+          ${State.theme === 'dark' ? 'حالت روز' : 'حالت شب'}
+        </button>
+      </div>
+    </div>
+
+    <div class="card mb-3">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-database"></i> مدیریت داده‌ها</div>
+      </div>
+      <p class="text-sm text-muted mb-2">تمام داده‌ها به صورت محلی در مرورگر شما ذخیره می‌شوند.</p>
+      <div class="flex-center" style="flex-wrap:wrap;gap:8px">
+        <button class="btn btn-ghost" onclick="exportData()"><i class="fa-solid fa-download"></i> خروجی JSON</button>
+        <button class="btn btn-ghost" onclick="importDataPrompt()"><i class="fa-solid fa-upload"></i> ورود JSON</button>
+        <button class="btn btn-danger" onclick="resetAllData()"><i class="fa-solid fa-trash"></i> پاک‌سازی همه داده‌ها</button>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <div class="card-title"><i class="fa-solid fa-circle-info"></i> درباره</div>
+      </div>
+      <p class="text-sm text-muted">TradeMitek — نسخه ۲.۰</p>
+      <p class="text-xs text-muted mt-1">ساخته‌شده توسط امیرمحمد خدارضایی</p>
+      <div class="flex-center mt-2" style="flex-wrap:wrap;gap:8px">
+        <button class="btn btn-sm btn-ghost" onclick="navigate('about')">درباره ما</button>
+        <button class="btn btn-sm btn-ghost" onclick="navigate('disclaimer')">سلب مسئولیت</button>
+      </div>
+    </div>
+  `;
+}
+
+function renderDisclaimer() {
+  return `
+    <h1 class="section-title"><i class="fa-solid fa-scale-balanced text-gold"></i> سلب مسئولیت</h1>
+    <p class="section-sub">لطفاً با دقت مطالعه کنید</p>
+    <div class="card">
+      <div class="danger-box mb-3">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        <div>معامله در بازارهای مالی با ریسک بالا همراه است و ممکن است منجر به از دست دادن سرمایه شود.</div>
+      </div>
+      <h3 class="mb-2" style="font-size:1.05rem">هدف آموزشی</h3>
+      <p class="text-sm text-muted mb-3">تمام مطالب این پلتفرم صرفاً با هدف آموزشی ارائه شده‌اند و به هیچ عنوان توصیه سرمایه‌گذاری، سیگنال معاملاتی یا مشاوره مالی نیستند.</p>
+      <h3 class="mb-2" style="font-size:1.05rem">ریسک بازارهای مالی</h3>
+      <p class="text-sm text-muted mb-3">بازارهای مالی ذاتاً پرریسک هستند. عملکرد گذشته تضمینی برای نتایج آینده نیست. اهرم می‌تواند زیان را نیز بزرگ‌تر کند.</p>
+      <h3 class="mb-2" style="font-size:1.05rem">عدم تضمین سود</h3>
+      <p class="text-sm text-muted mb-3">هیچ استراتژی، ابزار یا آموزشی سود قطعی را تضمین نمی‌کند. نتایج هر معامله به شرایط بازار و اجرای فردی بستگی دارد.</p>
+      <h3 class="mb-2" style="font-size:1.05rem">تأیید مستقل اطلاعات</h3>
+      <p class="text-sm text-muted mb-3">کاربران باید اطلاعات را مستقل از منابع معتبر بررسی کنند. این پلتفرم هیچ معامله‌ای را اجرا نمی‌کند.</p>
+      <h3 class="mb-2" style="font-size:1.05rem">مسئولیت کاربر</h3>
+      <p class="text-sm text-muted">مسئولیت هرگونه تصمیم معاملاتی صرفاً بر عهده کاربر است.</p>
+    </div>
+  `;
+}
+
+/* ================= DYNAMIC BINDINGS ================= */
+function bindDynamic() {
+  // favorite buttons
+  $$('[data-action="toggle-fav"]').forEach(btn => {
+    btn.onclick = (e) => { e.stopPropagation(); toggleFavorite(btn.dataset.id); };
+  });
+  // article cards
+  $$('[data-article]').forEach(el => {
+    el.onclick = (e) => {
+      if (e.target.closest('[data-action="toggle-fav"]')) return;
+      openArticle(el.dataset.article);
+    };
+  });
+  // strategy cards
+  $$('[data-strategy]').forEach(el => {
+    el.onclick = (e) => {
+      if (e.target.closest('[data-action="toggle-fav"]')) return;
+      openStrategy(el.dataset.strategy);
+    };
+  });
+  // tool cards
+  $$('[data-tool]').forEach(el => {
+    el.onclick = () => openTool(el.dataset.tool);
+  });
+  // glossary
+  $$('[data-glossary]').forEach(el => {
+    el.onclick = () => openGlossary(el.dataset.glossary);
+  });
+  // roadmap
+  $$('[data-roadmap]').forEach(el => {
+    el.onclick = () => toggleRoadmap(el.dataset.roadmap);
+  });
+  // checklist
+  $$('[data-checklist]').forEach(el => {
+    el.onclick = () => toggleChecklist(el.dataset.checklist);
+  });
+  // market cards on home & market
+  renderMarketCards('homeMarket');
+  renderMarketCards('marketGrid');
+  // session clock
+  updateSessionClock();
+  // chart
+  if (document.getElementById('live-chart')) {
+    ChartEngine.init('live-chart');
+    updateChartHeader();
+  }
+  // mini charts in hero
+  updateHeroCards();
+}
+
+/* ================= HERO CARDS / MINI CHARTS ================= */
+function updateHeroCards() {
+  $$('[data-price]').forEach(el => {
+    const sym = el.dataset.price;
+    const m = MarketEngine.live[sym];
+    if (!m) return;
+    const dec = m.price > 100 ? 2 : m.price > 10 ? 3 : 5;
+    el.textContent = '$' + fmt(m.price, dec);
+  });
+  $$('[data-change]').forEach(el => {
+    const sym = el.dataset.change;
+    const change = MarketEngine.getChange(sym);
+    const up = change >= 0;
+    el.className = 'card-change ' + (up ? 'up' : 'down');
+    el.innerHTML = `<i class="fa-solid fa-arrow-trend-${up ? 'up' : 'down'}"></i> ${(up ? '+' : '') + change.toFixed(2)}%`;
+  });
+  $$('[data-mini]').forEach(c => {
+    const sym = c.dataset.mini;
+    const up = MarketEngine.getChange(sym) >= 0;
+    drawMiniChart(c, sym, up);
+  });
+}
+
+/* ================= MARKET CARDS ================= */
+function renderMarketCards(id) {
+  const c = document.getElementById(id);
+  if (!c) return;
+  const symbols = id === 'homeMarket'
+    ? ['BTCUSDT', 'ETHUSDT', 'XAUUSD', 'EURUSD']
+    : Object.keys(MarketEngine.live);
+  c.innerHTML = symbols.map(s => {
+    const m = MarketEngine.live[s];
+    if (!m) return '';
+    const change = MarketEngine.getChange(s);
+    const up = change >= 0;
+    const dec = m.price > 100 ? 2 : m.price > 10 ? 3 : 5;
+    return `
+      <div class="market-card" data-market="${s}">
+        <div class="market-top">
+          <div class="market-symbol">
+            <div class="market-icon" style="color:${m.color}"><i class="fa-brands ${m.icon}"></i></div>
+            ${s}
+          </div>
+          <span class="card-live">زنده</span>
+        </div>
+        <div class="market-price" data-mp="${s}">${fmt(m.price, dec)}</div>
+        <div class="market-change ${up ? 'up' : 'down'}" data-mc="${s}">
+          <i class="fa-solid fa-arrow-trend-${up ? 'up' : 'down'}"></i>
+          ${(up ? '+' : '') + change.toFixed(2)}%
+        </div>
+      </div>
+    `;
+  }).join('');
+}
+
+function updateMarketCards() {
+  $$('[data-mp]').forEach(el => {
+    const sym = el.dataset.mp;
+    const m = MarketEngine.live[sym];
+    if (!m) return;
+    const dec = m.price > 100 ? 2 : m.price > 10 ? 3 : 5;
+    el.textContent = fmt(m.price, dec);
+  });
+  $$('[data-mc]').forEach(el => {
+    const sym = el.dataset.mc;
+    const change = MarketEngine.getChange(sym);
+    const up = change >= 0;
+    el.className = 'market-change ' + (up ? 'up' : 'down');
+    el.innerHTML = `<i class="fa-solid fa-arrow-trend-${up ? 'up' : 'down'}"></i> ${(up ? '+' : '') + change.toFixed(2)}%`;
+  });
+}
+
+/* ================= CHART HEADER ================= */
+function updateChartHeader() {
+  const m = MarketEngine.live[ChartEngine.symbol];
+  if (!m) return;
+  const dec = m.price > 100 ? 2 : m.price > 10 ? 3 : 5;
+  const priceEl = document.getElementById('chart-price');
+  const nameEl = document.getElementById('chart-symbol-name');
+  const changeEl = document.getElementById('chart-change');
+  if (priceEl) priceEl.textContent = fmt(m.price, dec);
+  if (nameEl) nameEl.textContent = ChartEngine.symbol + ' • ' + ChartEngine.tf;
+  if (changeEl) {
+    const change = MarketEngine.getChange(ChartEngine.symbol);
+    const up = change >= 0;
+    changeEl.className = 'chart-change ' + (up ? 'up' : 'down');
+    changeEl.innerHTML = `${(up ? '+' : '') + change.toFixed(2)}%`;
+  }
+}
+
+window.changeChartSymbol = function(s) {
+  ChartEngine.setSymbol(s);
+  updateChartHeader();
+};
+window.changeChartTf = function(t) {
+  ChartEngine.setTf(t);
+  updateChartHeader();
+};
+window.toggleChartPause = function() {
+  ChartEngine.paused = !ChartEngine.paused;
+  const btn = document.getElementById('chart-pause');
+  if (btn) btn.innerHTML = ChartEngine.paused
+    ? '<i class="fa-solid fa-play"></i> ادامه'
+    : '<i class="fa-solid fa-pause"></i> توقف';
+};
+
+/* ================= SESSION CLOCK ================= */
+function updateSessionClock() {
+  const el = document.getElementById('sessionClock');
+  if (!el) return;
+  const now = new Date();
+  const sessions = [
+    { city: 'توکیو', tz: 'Asia/Tokyo', flag: '🇯🇵' },
+    { city: 'لندن', tz: 'Europe/London', flag: '🇬🇧' },
+    { city: 'نیویورک', tz: 'America/New_York', flag: '🇺🇸' }
+  ];
+  el.innerHTML = sessions.map(s => {
+    let time = '—', isOpen = false;
+    try {
+      time = now.toLocaleTimeString('en-GB', { timeZone: s.tz, hour: '2-digit', minute: '2-digit' });
+      const h = parseInt(now.toLocaleString('en-GB', { timeZone: s.tz, hour: '2-digit', hour12: false }));
+      if (s.tz === 'Asia/Tokyo') isOpen = h >= 0 && h < 9;
+      else if (s.tz === 'Europe/London') isOpen = h >= 8 && h < 17;
+      else isOpen = h >= 13 && h < 22;
+    } catch (e) {}
+    return `
+      <div class="session-card">
+        <div class="city">${s.flag} ${s.city}</div>
+        <div class="time">${time}</div>
+        <div class="status ${isOpen ? 'session-open' : 'session-closed'}">${isOpen ? 'باز' : 'بسته'}</div>
+      </div>
+    `;
+  }).join('');
+}
+
+/* ================= OPEN ARTICLE / STRATEGY / TOOL / GLOSSARY ================= */
+function openModal(title, bodyHtml) {
+  document.getElementById('modalTitle').textContent = title;
+  document.getElementById('modalBody').innerHTML = bodyHtml;
+  document.getElementById('modalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeModal() {
+  document.getElementById('modalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function openArticle(id) {
+  const a = ARTICLES.find(x => x.id === id);
+  if (!a) return;
+  if (!State.progress['view_' + id]) {
+    State.progress['view_' + id] = true;
+    addXp(5);
+    save('progress');
+  }
+  const levelFa = a.level === 'beginner' ? 'مبتدی' : a.level === 'intermediate' ? 'متوسط' : 'پیشرفته';
+  const levelCls = a.level === 'beginner' ? 'level-beginner' : a.level === 'intermediate' ? 'level-intermediate' : 'level-advanced';
+  openModal(a.title, `
+    <div class="flex-center mb-3" style="flex-wrap:wrap;gap:6px">
+      <span class="tag ${levelCls}">${levelFa}</span>
+      <span class="tag tag-gold">${a.cat}</span>
+      <span class="tag"><i class="fa-solid fa-clock"></i> ${a.read} دقیقه</span>
+    </div>
+    <p class="mb-3">${a.desc}</p>
+    <div class="info-box mb-3">
+      <i class="fa-solid fa-circle-info"></i>
+      <div>محتوای کامل این درس در نسخه‌های بعدی به صورت ویدئو و متن ارائه می‌شود.</div>
+    </div>
+    <button class="btn btn-primary" onclick="markLessonDone('${a.id}')">
+      <i class="fa-solid fa-check"></i> تکمیل درس (+۲۰ XP)
+    </button>
+  `);
+}
+window.markLessonDone = function(id) {
+  if (!State.progress['done_' + id]) {
+    State.progress['done_' + id] = true;
+    addXp(20);
+    save('progress');
+    checkAchievements();
+    toast('درس با موفقیت تکمیل شد', 'success');
+    closeModal();
+    render();
+  } else {
+    toast('این درس قبلاً تکمیل شده', 'info');
+  }
+};
+
+function openStrategy(id) {
+  const s = STRATEGIES.find(x => x.id === id);
+  if (!s) return;
+  const levelFa = s.level === 'beginner' ? 'مبتدی' : s.level === 'intermediate' ? 'متوسط' : 'پیشرفته';
+  const levelCls = s.level === 'beginner' ? 'level-beginner' : s.level === 'intermediate' ? 'level-intermediate' : 'level-advanced';
+  const sec = (t, c) => `<div class="mb-2"><div style="font-weight:700;font-size:0.9rem;color:var(--gold-3)">${t}</div><div class="text-sm text-muted">${c}</div></div>`;
+  openModal(s.name, `
+    <div class="flex-center mb-3" style="flex-wrap:wrap;gap:6px">
+      <span class="tag tag-gold">${s.cat}</span>
+      <span class="tag ${levelCls}">${levelFa}</span>
+    </div>
+    ${sec('مفهوم', s.concept)}
+    ${sec('شرایط استفاده', s.conditions)}
+    ${sec('ابزارهای مورد نیاز', s.tools)}
+    ${sec('مزایا', s.pros)}
+    ${sec('محدودیت‌ها', s.cons)}
+    ${sec('نمونه سناریو', s.scenario)}
+    ${sec('نکات بک‌تست', s.backtest)}
+    ${sec('مدیریت ریسک', s.risk)}
+    <div class="warning-box mt-3">
+      <i class="fa-solid fa-triangle-exclamation"></i>
+      <div>این یک چارچوب آموزشی است و نتیجه آن به شرایط بازار و اجرای معامله بستگی دارد.</div>
+    </div>
+  `);
+}
+
+function openTool(id) {
+  const t = TOOLS_LIST.find(x => x.id === id);
+  if (!t) return;
+  const forms = {
+    t1: calcRiskForm, t2: calcPositionForm, t3: calcRRForm, t4: calcSLForm, t5: calcTPForm,
+    t6: calcPLForm, t7: calcFeeForm, t8: calcCapitalForm, t9: calcDrawdownForm, t10: calcHypoForm
+  };
+  openModal(t.name, forms[id] ? forms[id]() : '<p>ابزار در دسترس نیست.</p>');
+}
+
+function openGlossary(i) {
+  const g = GLOSSARY[parseInt(i)];
+  if (!g) return;
+  openModal(g.fa, `
+    <div class="text-center">
+      <div class="tag tag-sky mb-3" style="direction:ltr;font-size:0.9rem;padding:5px 14px">${g.en}</div>
+      <p class="text-sm" style="line-height:1.9">${g.def}</p>
+    </div>
+  `);
+}
+
+/* ================= CALCULATOR FORMS ================= */
+function calcRiskForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">سرمایه کل</label><input class="form-input" id="c1_cap" type="number" value="10000" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">درصد ریسک</label><input class="form-input" id="c1_pct" type="number" value="1" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">فاصله حد ضرر</label><input class="form-input" id="c1_sl" type="number" value="50" dir="ltr"></div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t1')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c1_result" class="calc-result" style="display:none"></div>
+    <div class="text-xs text-muted mt-2">فرمول: (سرمایه × درصد ریسک) ÷ فاصله حد ضرر = حجم پیشنهادی</div>
+  `;
+}
+function calcPositionForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">سرمایه</label><input class="form-input" id="c2_cap" type="number" value="10000" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">ریسک هر معامله (٪)</label><input class="form-input" id="c2_pct" type="number" value="1" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">حد ضرر (پیپ)</label><input class="form-input" id="c2_sl" type="number" value="20" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">ارزش هر پیپ</label><input class="form-input" id="c2_pip" type="number" value="10" dir="ltr"></div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t2')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c2_result" class="calc-result" style="display:none"></div>
+  `;
+}
+function calcRRForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">نقطه ورود</label><input class="form-input" id="c3_entry" type="number" value="100" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">حد ضرر</label><input class="form-input" id="c3_sl" type="number" value="95" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">حد سود</label><input class="form-input" id="c3_tp" type="number" value="115" dir="ltr"></div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t3')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c3_result" class="calc-result" style="display:none"></div>
+  `;
+}
+function calcSLForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">نقطه ورود</label><input class="form-input" id="c4_entry" type="number" value="100" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">ریسک (٪)</label><input class="form-input" id="c4_risk" type="number" value="1" dir="ltr"></div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t4')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c4_result" class="calc-result" style="display:none"></div>
+  `;
+}
+function calcTPForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">نقطه ورود</label><input class="form-input" id="c5_entry" type="number" value="100" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">حد ضرر</label><input class="form-input" id="c5_sl" type="number" value="95" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">نسبت R/R هدف</label><input class="form-input" id="c5_rr" type="number" value="2" dir="ltr"></div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t5')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c5_result" class="calc-result" style="display:none"></div>
+  `;
+}
+function calcPLForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">قیمت ورود</label><input class="form-input" id="c6_entry" type="number" value="100" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">قیمت خروج</label><input class="form-input" id="c6_exit" type="number" value="110" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">حجم</label><input class="form-input" id="c6_size" type="number" value="1" dir="ltr"></div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t6')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c6_result" class="calc-result" style="display:none"></div>
+  `;
+}
+function calcFeeForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">حجم معامله</label><input class="form-input" id="c7_size" type="number" value="1" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">کارمزد (٪)</label><input class="form-input" id="c7_fee" type="number" value="0.1" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">تعداد معاملات</label><input class="form-input" id="c7_count" type="number" value="10" dir="ltr"></div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t7')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c7_result" class="calc-result" style="display:none"></div>
+  `;
+}
+function calcCapitalForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">ریسک (٪)</label><input class="form-input" id="c8_risk" type="number" value="1" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">مبلغ ریسک قابل تحمل</label><input class="form-input" id="c8_amount" type="number" value="100" dir="ltr"></div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t8')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c8_result" class="calc-result" style="display:none"></div>
+  `;
+}
+function calcDrawdownForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">اوج سرمایه</label><input class="form-input" id="c9_peak" type="number" value="10000" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">کف سرمایه</label><input class="form-input" id="c9_trough" type="number" value="8000" dir="ltr"></div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t9')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c9_result" class="calc-result" style="display:none"></div>
+  `;
+}
+function calcHypoForm() {
+  return `
+    <div class="form-row">
+      <div class="form-group"><label class="form-label">ورود</label><input class="form-input" id="c10_entry" type="number" value="100" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">خروج</label><input class="form-input" id="c10_exit" type="number" value="110" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">حجم</label><input class="form-input" id="c10_size" type="number" value="1" dir="ltr"></div>
+      <div class="form-group"><label class="form-label">جهت</label>
+        <select class="form-select" id="c10_dir"><option value="buy">خرید</option><option value="sell">فروش</option></select>
+      </div>
+    </div>
+    <button class="btn btn-primary" onclick="runCalc('t10')"><i class="fa-solid fa-bolt"></i> محاسبه</button>
+    <div id="c10_result" class="calc-result" style="display:none"></div>
+  `;
+}
+
+function readNum(id) { const el = document.getElementById(id); return el ? (parseFloat(el.value) || 0) : 0; }
+function resultRow(k, v) { return `<div class="calc-result-row"><span>${k}</span><span class="calc-result-value">${v}</span></div>`; }
+function showResult(id, html) {
+  const el = document.getElementById(id);
+  if (el) { el.innerHTML = html; el.style.display = 'block'; }
+}
+window.runCalc = function(id) {
+  try {
+    switch (id) {
+      case 't1': {
+        const cap = readNum('c1_cap'), pct = readNum('c1_pct'), sl = readNum('c1_sl');
+        const riskAmt = cap * pct / 100;
+        const size = sl ? riskAmt / sl : 0;
+        showResult('c1_result', resultRow('مبلغ ریسک', fmt(riskAmt) + ' $') + resultRow('حجم پیشنهادی', fmt(size)));
+        break;
+      }
+      case 't2': {
+        const cap = readNum('c2_cap'), pct = readNum('c2_pct'), sl = readNum('c2_sl'), pip = readNum('c2_pip');
+        const riskAmt = cap * pct / 100;
+        const size = (sl && pip) ? riskAmt / (sl * pip) : 0;
+        showResult('c2_result', resultRow('مبلغ ریسک', fmt(riskAmt) + ' $') + resultRow('حجم (لات)', fmt(size, 4)));
+        break;
+      }
+      case 't3': {
+        const e = readNum('c3_entry'), sl = readNum('c3_sl'), tp = readNum('c3_tp');
+        const risk = Math.abs(e - sl), reward = Math.abs(tp - e);
+        const rr = risk ? reward / risk : 0;
+        showResult('c3_result', resultRow('ریسک', fmt(risk)) + resultRow('ریوارد', fmt(reward)) + resultRow('نسبت R/R', '1 : ' + fmt(rr, 2)));
+        break;
+      }
+      case 't4': {
+        const e = readNum('c4_entry'), r = readNum('c4_risk');
+        const sl = e - (e * r / 100);
+        showResult('c4_result', resultRow('حد ضرر پیشنهادی', fmt(sl)));
+        break;
+      }
+      case 't5': {
+        const e = readNum('c5_entry'), sl = readNum('c5_sl'), rr = readNum('c5_rr');
+        const risk = Math.abs(e - sl);
+        const tp = e + risk * rr;
+        showResult('c5_result', resultRow('ریسک', fmt(risk)) + resultRow('حد سود پیشنهادی', fmt(tp)));
+        break;
+      }
+      case 't6': {
+        const e = readNum('c6_entry'), x = readNum('c6_exit'), s = readNum('c6_size');
+        const diff = x - e, pct = e ? diff / e * 100 : 0, profit = diff * s;
+        showResult('c6_result', resultRow('تغییر قیمت', fmt(diff)) + resultRow('درصد تغییر', fmt(pct, 2) + '%') + resultRow('سود/زیان', fmt(profit) + ' $'));
+        break;
+      }
+      case 't7': {
+        const s = readNum('c7_size'), f = readNum('c7_fee'), c = readNum('c7_count');
+        const perTrade = s * f / 100, total = perTrade * c;
+        showResult('c7_result', resultRow('کارمزد هر معامله', fmt(perTrade) + ' $') + resultRow('مجموع کارمزد', fmt(total) + ' $'));
+        break;
+      }
+      case 't8': {
+        const r = readNum('c8_risk'), a = readNum('c8_amount');
+        const cap = r ? a / (r / 100) : 0;
+        showResult('c8_result', resultRow('سرمایه مورد نیاز', fmt(cap) + ' $'));
+        break;
+      }
+      case 't9': {
+        const p = readNum('c9_peak'), t = readNum('c9_trough');
+        const dd = p ? ((p - t) / p * 100) : 0;
+        showResult('c9_result', resultRow('افت سرمایه', fmt(dd, 2) + '%') + resultRow('مبلغ افت', fmt(p - t) + ' $'));
+        break;
+      }
+      case 't10': {
+        const e = readNum('c10_entry'), x = readNum('c10_exit'), s = readNum('c10_size');
+        const dir = document.getElementById('c10_dir').value;
+        const diff = dir === 'buy' ? x - e : e - x;
+        const profit = diff * s;
+        showResult('c10_result', resultRow('نتیجه فرضی', fmt(profit) + ' $') + resultRow('درصد', fmt(e ? diff / e * 100 : 0, 2) + '%'));
+        break;
+      }
+    }
+  } catch (e) { toast('خطا در محاسبه', 'error'); }
+};
+
+window.quickRiskCalc = function() {
+  const cap = readNum('riskCapital'), pct = readNum('riskPercent'), sl = readNum('riskSL');
+  const riskAmt = cap * pct / 100;
+  const size = sl ? riskAmt / sl : 0;
+  showResult('riskResult', resultRow('مبلغ ریسک', fmt(riskAmt) + ' $') + resultRow('حجم پیشنهادی', fmt(size)));
+};
+
+/* ================= WATCHLIST / FAVORITES / PROGRESS ================= */
+window.toggleWatchlist = function(sym) {
+  const idx = State.watchlist.indexOf(sym);
+  if (idx >= 0) { State.watchlist.splice(idx, 1); toast(sym + ' از واچ‌لیست حذف شد', 'info'); }
+  else { State.watchlist.push(sym); toast(sym + ' به واچ‌لیست اضافه شد', 'success'); }
+  save('watchlist');
+  if (currentRoute === 'watchlist') render();
+  else bindDynamic();
+};
+window.toggleFavorite = function(id) {
+  const idx = State.favorites.indexOf(id);
+  if (idx >= 0) { State.favorites.splice(idx, 1); toast('از علاقه‌مندی‌ها حذف شد', 'info'); }
+  else { State.favorites.push(id); toast('به علاقه‌مندی‌ها اضافه شد', 'success'); }
+  save('favorites');
+  // update buttons in-place
+  $$('[data-action="toggle-fav"][data-id="' + id + '"]').forEach(btn => {
+    btn.classList.toggle('active', isFav(id));
+  });
+};
+function isFav(id) { return State.favorites.includes(id); }
+window.toggleRoadmap = function(step) {
+  State.progress[step] = !State.progress[step];
+  if (State.progress[step]) { addXp(20); toast('مرحله ' + step + ' تکمیل شد (+۲۰ XP)', 'success'); }
+  save('progress');
+  checkAchievements();
+  render();
+};
+window.toggleChecklist = function(key) {
+  State.checklist[key] = !State.checklist[key];
+  if (State.checklist[key]) addXp(10);
+  save('checklist');
+  checkAchievements();
+  render();
+};
+
+/* ================= XP & ACHIEVEMENTS ================= */
+function addXp(amount) {
+  State.xp += amount;
+  save('xp');
+}
+function getLevel(xp) {
+  const levels = [
+    { num: 1, name: 'شروع‌کننده', min: 0, next: 100 },
+    { num: 2, name: 'یادگیرنده', min: 100, next: 300 },
+    { num: 3, name: 'تحلیل‌گر', min: 300, next: 600 },
+    { num: 4, name: 'منظم', min: 600, next: 1000 },
+    { num: 5, name: 'پژوهشگر', min: 1000, next: null }
+  ];
+  let cur = levels[0];
+  for (const l of levels) if (xp >= l.min) cur = l;
+  const rangeStart = cur.min;
+  const rangeEnd = cur.next || cur.min + 500;
+  const progress = cur.next ? Math.round(((xp - rangeStart) / (rangeEnd - rangeStart)) * 100) : 100;
+  return { num: cur.num, name: cur.name, progress: Math.min(100, Math.max(0, progress)), next: cur.next };
+}
+function checkAchievements() {
+  const lessonsDone = Object.keys(State.progress).filter(k => k.startsWith('done_')).length;
+  const checklistDone = Object.values(State.checklist).filter(Boolean).length;
+  const roadmapDone = ROADMAP.filter(r => State.progress[r.n]).length;
+  const unlock = (key, msg) => {
+    if (!State.achievements[key]) {
+      State.achievements[key] = true;
+      toast('🏆 دستاورد جدید: ' + msg, 'success');
+    }
+  };
+  if (lessonsDone >= 1) unlock('first_lesson', 'اولین درس');
+  if (State.journal.length >= 1) unlock('first_journal', 'اولین ژورنال');
+  if (lessonsDone >= 10) unlock('ten_lessons', '۱۰ درس کامل');
+  if (checklistDone >= 10) unlock('quiz_master', 'استاد کوییز');
+  if (roadmapDone >= ROADMAP.length) unlock('roadmap_full', 'مسیر کامل');
+  save('achievements');
+}
+
+/* ================= JOURNAL ================= */
+window.saveJournal = function() {
+  const date = document.getElementById('jDate').value.trim();
+  const asset = document.getElementById('jAsset').value.trim();
+  if (!date || !asset) { toast('تاریخ و نماد الزامی است', 'error'); return; }
+  const entry = {
+    id: uid('j'),
+    date,
+    asset,
+    dir: document.getElementById('jDir').value,
+    result: document.getElementById('jResult').value,
+    entry: document.getElementById('jEntry').value,
+    sl: document.getElementById('jSL').value,
+    tp: document.getElementById('jTP').value,
+    pnl: parseFloat(document.getElementById('jPnl').value) || 0,
+    reason: document.getElementById('jReason').value,
+    note: document.getElementById('jNote').value,
+    at: Date.now()
+  };
+  State.journal.unshift(entry);
+  save('journal');
+  addXp(15);
+  checkAchievements();
+  toast('معامله ثبت شد (+۱۵ XP)', 'success');
+  render();
+};
+window.deleteJournal = function(id) {
+  if (!confirm('این معامله حذف شود؟')) return;
+  State.journal = State.journal.filter(j => j.id !== id);
+  save('journal');
+  toast('معامله حذف شد', 'info');
+  render();
+};
+
+/* ================= NOTES ================= */
+window.openNoteModal = function() {
+  openModal('یادداشت جدید', `
+    <div class="form-group"><label class="form-label">عنوان</label><input class="form-input" id="noteTitle" placeholder="عنوان یادداشت"></div>
+    <div class="form-group"><label class="form-label">متن</label><textarea class="form-textarea" id="noteBody" placeholder="متن یادداشت..."></textarea></div>
+    <button class="btn btn-primary" onclick="saveNote()"><i class="fa-solid fa-check"></i> ذخیره</button>
+  `);
+};
+window.saveNote = function() {
+  const title = document.getElementById('noteTitle').value.trim();
+  const body = document.getElementById('noteBody').value.trim();
+  if (!title) { toast('عنوان را وارد کنید', 'error'); return; }
+  State.notes.unshift({ id: uid('n'), title, body, date: new Date().toLocaleDateString('fa-IR') });
+  save('notes');
+  toast('یادداشت ذخیره شد', 'success');
+  closeModal();
+  render();
+};
+window.deleteNote = function(id) {
+  State.notes = State.notes.filter(n => n.id !== id);
+  save('notes');
+  toast('یادداشت حذف شد', 'info');
+  render();
+};
+
+/* ================= THEME ================= */
+window.toggleTheme = function() {
+  State.theme = State.theme === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', State.theme);
+  applyLightTheme(State.theme === 'light');
+  save('theme');
+  const icon = document.getElementById('themeIcon');
+  if (icon) icon.className = State.theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+  toast(State.theme === 'dark' ? 'حالت شب فعال شد' : 'حالت روز فعال شد', 'info');
+};
+function applyLightTheme(on) {
+  const root = document.documentElement;
+  if (on) {
+    root.style.setProperty('--bg-0', '#f0f3f8');
+    root.style.setProperty('--bg-1', '#f7f9fc');
+    root.style.setProperty('--bg-2', '#ffffff');
+    root.style.setProperty('--bg-3', '#e8edf5');
+    root.style.setProperty('--bg-4', '#dde4ef');
+    root.style.setProperty('--glass', 'rgba(255, 255, 255, 0.85)');
+    root.style.setProperty('--glass-2', 'rgba(255, 255, 255, 0.95)');
+    root.style.setProperty('--glass-border', 'rgba(184, 134, 59, 0.20)');
+    root.style.setProperty('--glass-border-2', 'rgba(184, 134, 59, 0.40)');
+    root.style.setProperty('--glass-hover', 'rgba(255, 255, 255, 0.98)');
+    root.style.setProperty('--text-0', '#0d1521');
+    root.style.setProperty('--text-1', '#2a3a55');
+    root.style.setProperty('--text-2', '#5a6a85');
+    root.style.setProperty('--text-3', '#8a9ab5');
+  } else {
+    root.style.removeProperty('--bg-0');
+    root.style.removeProperty('--bg-1');
+    root.style.removeProperty('--bg-2');
+    root.style.removeProperty('--bg-3');
+    root.style.removeProperty('--bg-4');
+    root.style.removeProperty('--glass');
+    root.style.removeProperty('--glass-2');
+    root.style.removeProperty('--glass-border');
+    root.style.removeProperty('--glass-border-2');
+    root.style.removeProperty('--glass-hover');
+    root.style.removeProperty('--text-0');
+    root.style.removeProperty('--text-1');
+    root.style.removeProperty('--text-2');
+    root.style.removeProperty('--text-3');
+  }
+}
+
+/* ================= SEARCH ================= */
+window.openSearch = function() {
+  document.getElementById('searchOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+  setTimeout(() => document.getElementById('searchInput')?.focus(), 100);
+  performSearch('');
+};
+window.closeSearch = function() {
+  document.getElementById('searchOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+};
+window.performSearch = function(q) {
+  const query = (q || '').trim().toLowerCase();
+  const results = [];
+  if (!query) {
+    results.push({ title: 'آموزش‌ها', cat: 'دسته‌بندی', icon: 'fa-book', action: "navigate('education')" });
+    results.push({ title: 'ابزارها', cat: 'دسته‌بندی', icon: 'fa-calculator', action: "navigate('tools')" });
+    results.push({ title: 'استراتژی‌ها', cat: 'دسته‌بندی', icon: 'fa-chess', action: "navigate('strategies')" });
+    results.push({ title: 'واژه‌نامه', cat: 'دسته‌بندی', icon: 'fa-book', action: "navigate('dictionary')" });
+    results.push({ title: 'مدیریت ریسک', cat: 'دسته‌بندی', icon: 'fa-shield-halved', action: "navigate('risk')" });
+    results.push({ title: 'ژورنال معاملات', cat: 'دسته‌بندی', icon: 'fa-pen-to-square', action: "navigate('journal')" });
+  } else {
+    ARTICLES.forEach(a => {
+      if (a.title.toLowerCase().includes(query) || a.desc.toLowerCase().includes(query) || a.cat.toLowerCase().includes(query))
+        results.push({ title: a.title, cat: 'آموزش • ' + a.cat, icon: 'fa-book', action: "openArticle('" + a.id + "')" });
+    });
+    STRATEGIES.forEach(s => {
+      if (s.name.toLowerCase().includes(query) || s.concept.toLowerCase().includes(query))
+        results.push({ title: s.name, cat: 'استراتژی • ' + s.cat, icon: 'fa-chess', action: "openStrategy('" + s.id + "')" });
+    });
+    GLOSSARY.forEach((g, i) => {
+      if (g.fa.includes(query) || g.en.toLowerCase().includes(query))
+        results.push({ title: g.fa, cat: 'واژه‌نامه • ' + g.en, icon: 'fa-book', action: "openGlossary(" + i + ")" });
+    });
+    SOFTWARE.forEach(s => {
+      if (s.name.toLowerCase().includes(query))
+        results.push({ title: s.name, cat: 'نرم‌افزار • ' + s.suitable, icon: 'fa-laptop-code', action: "navigate('software')" });
+    });
+    TOOLS_LIST.forEach(t => {
+      if (t.name.includes(query))
+        results.push({ title: t.name, cat: 'ابزار', icon: t.icon, action: "openTool('" + t.id + "')" });
+    });
+  }
+  const el = document.getElementById('searchResults');
+  if (!results.length) {
+    el.innerHTML = '<div class="search-empty"><div class="ic"><i class="fa-solid fa-magnifying-glass"></i></div><div>نتیجه‌ای یافت نشد</div><div class="text-xs mt-1">عبارت دیگری را امتحان کنید</div></div>';
+  } else {
+    el.innerHTML = results.map(r => `
+      <div class="search-result" onclick="${r.action};closeSearch()">
+        <div class="search-result-icon"><i class="fa-solid ${r.icon}"></i></div>
+        <div>
+          <div class="search-result-title">${highlight(r.title, query)}</div>
+          <div class="search-result-cat">${r.cat}</div>
+        </div>
+      </div>
+    `).join('');
+  }
+};
+function highlight(text, q) {
+  if (!q) return text;
+  const re = new RegExp('(' + q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&') + ')', 'gi');
+  return text.replace(re, '<mark style="background:var(--gold-2);color:#1a1206;border-radius:3px;padding:0 3px">$1</mark>');
+}
+
+/* ================= DRAWER ================= */
+window.openDrawer = function() {
+  document.getElementById('drawer').classList.add('open');
+  document.body.style.overflow = 'hidden';
+};
+window.closeDrawer = function() {
+  document.getElementById('drawer').classList.remove('open');
+  document.body.style.overflow = '';
+};
+
+/* ================= TOAST ================= */
+window.toast = function(msg, type) {
+  type = type || 'info';
+  const c = document.getElementById('toasts');
+  if (!c) return;
+  const t = document.createElement('div');
+  t.className = 'toast ' + type;
+  const icons = { success: 'fa-circle-check', error: 'fa-circle-xmark', info: 'fa-circle-info', warning: 'fa-triangle-exclamation' };
+  t.innerHTML = '<i class="fa-solid ' + (icons[type] || 'fa-circle-info') + '"></i><span>' + msg + '</span>';
+  c.appendChild(t);
+  setTimeout(() => { t.classList.add('out'); setTimeout(() => t.remove(), 300); }, 3200);
+};
+
+/* ================= MISC HELPERS ================= */
+function routeName(r) {
+  const map = { home: 'خانه', dashboard: 'داشبورد', education: 'آموزش', tools: 'ابزارها', market: 'بازار', strategies: 'استراتژی‌ها', risk: 'مدیریت ریسک', psychology: 'روانشناسی', dictionary: 'واژه‌نامه', software: 'نرم‌افزارها', resources: 'منابع', about: 'درباره ما', journal: 'ژورنال', watchlist: 'واچ‌لیست', favorites: 'علاقه‌مندی‌ها', settings: 'تنظیمات', disclaimer: 'سلب مسئولیت' };
+  return map[r] || r;
+}
+window.filterDictionary = function(q) {
+  const query = (q || '').trim().toLowerCase();
+  $$('[data-glossary]').forEach(el => {
+    const i = parseInt(el.dataset.glossary);
+    const g = GLOSSARY[i];
+    const match = !query || g.fa.includes(query) || g.en.toLowerCase().includes(query) || g.def.includes(query);
+    el.style.display = match ? '' : 'none';
+  });
+};
+
+/* ================= EXPORT / IMPORT / RESET ================= */
+window.exportData = function() {
+  const data = {
+    version: 2,
+    exportedAt: new Date().toISOString(),
+    theme: State.theme,
+    notes: State.notes, journal: State.journal, watchlist: State.watchlist,
+    favorites: State.favorites, progress: State.progress, checklist: State.checklist,
+    xp: State.xp, achievements: State.achievements, recent: State.recent
+  };
+  const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'trademitek-backup-' + new Date().toISOString().slice(0, 10) + '.json';
+  a.click();
+  URL.revokeObjectURL(url);
+  toast('داده‌ها با موفقیت صادر شد', 'success');
+};
+window.importDataPrompt = function() {
+  const input = document.createElement('input');
+  input.type = 'file';
+  input.accept = '.json,application/json';
+  input.onchange = (e) => {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = (ev) => {
+      try {
+        const data = JSON.parse(ev.target.result);
+        if (!data || typeof data !== 'object') throw new Error('invalid');
+        if (Array.isArray(data.notes)) State.notes = data.notes;
+        if (Array.isArray(data.journal)) State.journal = data.journal;
+        if (Array.isArray(data.watchlist)) State.watchlist = data.watchlist;
+        if (Array.isArray(data.favorites)) State.favorites = data.favorites;
+        if (data.progress && typeof data.progress === 'object') State.progress = data.progress;
+        if (data.checklist && typeof data.checklist === 'object') State.checklist = data.checklist;
+        if (typeof data.xp === 'number') State.xp = data.xp;
+        if (data.achievements && typeof data.achievements === 'object') State.achievements = data.achievements;
+        ['notes', 'journal', 'watchlist', 'favorites', 'progress', 'checklist', 'xp', 'achievements'].forEach(k => save(k));
+        toast('داده‌ها با موفقیت وارد شد', 'success');
+        render();
+      } catch (err) { toast('فایل نامعتبر است', 'error'); }
+    };
+    reader.readAsText(file);
+  };
+  input.click();
+};
+window.resetAllData = function() {
+  if (!confirm('تمام داده‌ها پاک شود؟ این عمل قابل بازگشت نیست.')) return;
+  Object.values(KEYS).forEach(k => localStorage.removeItem(k));
+  toast('تمام داده‌ها پاک شد', 'info');
+  setTimeout(() => location.reload(), 800);
+};
+
+/* ================= TYPEWRITER ================= */
+function initTypewriter() {
+  const el = document.getElementById('typewriter');
+  if (!el) return;
+  const phrases = ['با استراتژی دقیق', 'با مدیریت ریسک هوشمند', 'با تحلیل حرفه‌ای', 'با ابزارهای پیشرفته'];
+  let p = 0, c = 0, deleting = false;
+  function tick() {
+    const cur = phrases[p];
+    if (!deleting) {
+      el.textContent = cur.slice(0, ++c);
+      if (c === cur.length) { deleting = true; setTimeout(tick, 1800); return; }
+    } else {
+      el.textContent = cur.slice(0, --c);
+      if (c === 0) { deleting = false; p = (p + 1) % phrases.length; }
+    }
+    setTimeout(tick, deleting ? 35 : 75);
+  }
+  tick();
+}
+
+/* ================= COUNTERS ================= */
+function initCounters() {
+  $$('[data-count]').forEach(el => {
+    if (el.dataset.done) return;
+    const target = parseFloat(el.dataset.count);
+    const suffix = el.dataset.suffix || '';
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (!e.isIntersecting) return;
+        el.dataset.done = '1';
+        const dur = 1500;
+        const start = performance.now();
+        function step(now) {
+          const t = Math.min((now - start) / dur, 1);
+          const eased = 1 - Math.pow(1 - t, 3);
+          const v = target * eased;
+          el.textContent = (target >= 1000 ? Math.floor(v).toLocaleString('fa-IR') : Math.floor(v).toLocaleString('fa-IR')) + suffix;
+          if (t < 1) requestAnimationFrame(step);
+          else el.textContent = target.toLocaleString('fa-IR') + suffix;
+        }
+        requestAnimationFrame(step);
+        io.disconnect();
+      });
+    }, { threshold: 0.3 });
+    io.observe(el);
+  });
+}
+
+/* ================= REVEAL ================= */
+function initReveal() {
+  const els = $$('.reveal:not(.revealed)');
+  if (!els.length) return;
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('revealed');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -60px 0px' });
+  els.forEach(el => io.observe(el));
+}
+
+/* ================= LIVE TICKS ================= */
+function startLiveEngine() {
+  // Market tick
+  setInterval(() => {
+    MarketEngine.tick();
+    // update visible prices
+    updateMarketCards();
+    updateHeroCards();
+    // update chart
+    if (document.getElementById('live-chart')) updateChartHeader();
+    // update watchlist card
+    $$('[data-mp]').forEach(el => {});
+  }, 1200);
+
+  // Session clock
+  setInterval(updateSessionClock, 30000);
+  updateSessionClock();
+}
+
+/* ================= BUILD NAV ================= */
+function buildNav() {
+  const nav = document.getElementById('navLinks');
+  if (!nav) return;
+  nav.innerHTML = NAV_ITEMS.map(item =>
+    '<button class="nav-link" data-route="' + item.route + '" onclick="navigate(\'' + item.route + '\')">' + item.label + '</button>'
+  ).join('');
+}
+
+/* ================= SCROLL TOP ================= */
+function initScrollTop() {
+  const btn = document.getElementById('scrollTop');
+  if (!btn) return;
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('show', window.scrollY > 500);
+  }, { passive: true });
+}
+
+/* ================= SHORTCUTS ================= */
+document.addEventListener('keydown', (e) => {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+    e.preventDefault(); openSearch();
+  }
+  if (e.key === 'Escape') { closeSearch(); closeModal(); closeDrawer(); }
+});
+
+/* ================= INIT ================= */
+function init() {
+  document.documentElement.setAttribute('data-theme', State.theme);
+  if (State.theme === 'light') applyLightTheme(true);
+  const icon = document.getElementById('themeIcon');
+  if (icon) icon.className = State.theme === 'dark' ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
+
+  buildNav();
+  initBgCanvas();
+  handleHash();
+  initTypewriter();
+  initScrollTop();
+  startLiveEngine();
+
+  setTimeout(() => {
+    if (!localStorage.getItem(KEYS.welcomed)) {
+      toast('به TradeMitek خوش آمدید', 'info');
+      localStorage.setItem(KEYS.welcomed, '1');
+    }
+  }, 1200);
+}
+
+// Expose for inline handlers
+window.navigate = navigate;
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', init);
+} else {
+  init();
+}
+
+})();
+</script>
+</body>
+  </html>
